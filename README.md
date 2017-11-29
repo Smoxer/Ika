@@ -27,8 +27,24 @@ In the past Ika+ was a paid program.  But now under the big maintence it takes, 
 Help us improve Ika+ by dontaing from your own knowledge or by Bitcoin:  
 ```
 1Gw5nYWfpeFha9sQtDxYubk8rYFtGoLF1X
-```
+```  
+The updater is not working for now. If you want to check if an update is out, check this page.
 
-## License
 
+## License  
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Download  
+[Windows x64](https://github.com/Smoxer/Ika/tree/master/Release/Ikariam%2B_x64)  
+[Windows x86](https://github.com/Smoxer/Ika/tree/master/Release/Ikariam%2B_x86)  
+
+
+
+
+This project is a huge project to one man to develop on it's own.  
+To help this project, please consider donating by Bitcoin:  
+```
+1Gw5nYWfpeFha9sQtDxYubk8rYFtGoLF1X
+```  
+Or start to code and upgrade this great tool! :)
+
