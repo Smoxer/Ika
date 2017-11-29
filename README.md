@@ -1,7 +1,6 @@
 Ika+ - Ikariam best bot
 ----------------------
 
-
 ## Basic information  
 Ika+ is a program to your computer that allow you to connect to your ikariam's account, on any server, on any country.  
 You can open multiple windows on your multiple accounts.  
@@ -23,7 +22,7 @@ Visual C++ Redistributable 2013
 Ram: 20MB (!)  
 Available space: 100MB  
 
-#Special note  
+## Special note  
 In the past Ika+ was a paid program.  But now under the big maintence it takes, Ika+ is now a free.  
 Help us improve Ika+ by dontaing from your own knowledge or by Bitcoin:  
 ```
