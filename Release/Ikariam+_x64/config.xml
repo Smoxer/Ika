@@ -1,0 +1,43 @@
+<Bot>
+  <Option>Login</Option>
+  <!-- 
+		Available options: 
+		Login - Login to account and start doing the scripts
+		Register - Register new accounts and play as bot until pirate fortress
+	-->
+  <ServerGame>s1-us</ServerGame>
+  <Server>us</Server>
+  <User>
+    <UserName></UserName>
+    <Password></Password>
+    <APIKey9K>
+    </APIKey9K>
+    <APISource9K>
+    </APISource9K>
+    <CaptcherProvider>9KW</CaptcherProvider>
+  </User>
+  <NewUsers>
+    <UserName>
+    </UserName>
+    <!-- In the game: donate1, donate2 . . . -->
+    <Password>
+    </Password>
+    <EMail>
+    </EMail>
+  </NewUsers>
+  <Proxy>
+    <EnableProxy>false</EnableProxy>
+    <!-- true/false -->
+    <Address>
+    </Address>
+  </Proxy>
+  <FastLocations>
+    <Location>
+      <Name>Center</Name>
+      <XY>50:50</XY>
+    </Location>
+  </FastLocations>
+  <FastCities>
+  </FastCities>
+  <UserAgent>Mozilla/5.0 (Windows NT 10.0; WOW64; rv:48.0) Gecko/20100101 Firefox/48.0</UserAgent>
+</Bot>

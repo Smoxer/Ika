@@ -1,0 +1,9 @@
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\bin\Debug\Launcher.exe.config
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\bin\Debug\Launcher.exe
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\bin\Debug\Launcher.pdb
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\obj\Debug\Launcher.csprojResolveAssemblyReference.cache
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\obj\Debug\Launcher.Form1.resources
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\obj\Debug\Launcher.Properties.Resources.resources
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\obj\Debug\Launcher.csproj.GenerateResource.Cache
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\obj\Debug\Launcher.exe
+C:\Users\Omri\Desktop\Ikariambots\Launcher\Launcher\obj\Debug\Launcher.pdb

@@ -1,0 +1,13 @@
+C:\Users\Omri\Desktop\Updater\Updater\bin\Release\Updater.exe.config
+C:\Users\Omri\Desktop\Updater\Updater\bin\Release\Updater.exe
+C:\Users\Omri\Desktop\Updater\Updater\bin\Release\Updater.pdb
+C:\Users\Omri\Desktop\Updater\Updater\bin\Release\NUnrar.dll
+C:\Users\Omri\Desktop\Updater\Updater\obj\Release\Updater.exe
+C:\Users\Omri\Desktop\Updater\Updater\obj\Release\Updater.pdb
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\Release\Updater.exe.config
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\obj\Release\Updater.exe
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\obj\Release\Updater.pdb
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\Release\Updater.exe
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\Release\Updater.pdb
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\Release\NUnrar.dll
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\obj\Release\Updater.csprojResolveAssemblyReference.cache

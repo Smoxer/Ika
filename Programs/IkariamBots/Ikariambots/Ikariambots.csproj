@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.props" Condition="Exists('..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.props')" />
+  <Import Project="..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.props" Condition="Exists('..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{20C20CC1-7A6F-4CFD-95FE-FE9E1746B603}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IkariamBots</RootNamespace>
+    <AssemblyName>IkariamPlus</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\Omri\Desktop\sss\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.1.9.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>development.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1ECD8A6028E4E6A31B68774763E76CAB83F43435</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Ikariambots_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Platform)' == 'x64'">
+    <Reference Include="DecaptcherLib, Version=1.0.4194.40583, Culture=neutral, processorArchitecture=x64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DecaptcherLib\DecaptcherLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup Condition="'$(Platform)' == 'x86'">
+    <Reference Include="DecaptcherLib, Version=1.0.4194.40583, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DecaptcherLib\x86\DecaptcherLib.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <!--<Reference Include="DecaptcherLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DecaptcherLib\DecaptcherLib.dll</HintPath>
+      <Private>False</Private>
+    </Reference>-->
+    <Reference Include="INIFileParser, Version=2.3.0.0, Culture=neutral, PublicKeyToken=79af7b307b65cf3c, processorArchitecture=MSIL">
+      <HintPath>..\packages\ini-parser.2.3.0\lib\net20\INIFileParser.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AutoRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AutoRegister.Designer.cs">
+      <DependentUpon>AutoRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="captchas\CaptchaFactory.cs" />
+    <Compile Include="captchas\CaptchaSolver.cs" />
+    <Compile Include="captchas\DeathByCaptcha.cs" />
+    <Compile Include="captchas\DeathByCaptcha\AccessDeniedException.cs" />
+    <Compile Include="captchas\DeathByCaptcha\Captcha.cs" />
+    <Compile Include="captchas\DeathByCaptcha\Client.cs" />
+    <Compile Include="captchas\DeathByCaptcha\Exception.cs" />
+    <Compile Include="captchas\DeathByCaptcha\HttpClient.cs" />
+    <Compile Include="captchas\DeathByCaptcha\InvalidCaptchaException.cs" />
+    <Compile Include="captchas\DeathByCaptcha\PollPayload.cs" />
+    <Compile Include="captchas\DeathByCaptcha\ServiceOverloadException.cs" />
+    <Compile Include="captchas\DeathByCaptcha\SocketClient.cs" />
+    <Compile Include="captchas\DeathByCaptcha\User.cs" />
+    <Compile Include="captchas\Decaptcher.cs" />
+    <Compile Include="captchas\KwEu.cs" />
+    <Compile Include="captchas\ManualCaptcha.cs" />
+    <Compile Include="captchas\SimpleJson\Reader.cs" />
+    <Compile Include="captchas\SimpleJson\Writer.cs" />
+    <Compile Include="captchas\TwoCaptcha.cs" />
+    <Compile Include="Config.cs" />
+    <Compile Include="Forms\CSV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CSV.Designer.cs">
+      <DependentUpon>CSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CityAndIslandID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CityAndIslandID.Designer.cs">
+      <DependentUpon>CityAndIslandID.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\IslandsByTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\IslandsByTime.Designer.cs">
+      <DependentUpon>IslandsByTime.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ManualCaptchaInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ManualCaptchaInput.Designer.cs">
+      <DependentUpon>ManualCaptchaInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NumberPicker.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NumberPicker.Designer.cs">
+      <DependentUpon>NumberPicker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PiracyInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PiracyInfo.Designer.cs">
+      <DependentUpon>PiracyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectUsers.Designer.cs">
+      <DependentUpon>SelectUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ikariam\Exceptions\ActionRequestException.cs" />
+    <Compile Include="Ikariam\City.cs" />
+    <Compile Include="Ikariam\Connection.cs" />
+    <Compile Include="Ikariam\Network.cs" />
+    <Compile Include="Ikariam\PiracyTopUser.cs" />
+    <Compile Include="Ikariam\TopUser.cs" />
+    <Compile Include="Ikariam\User.cs" />
+    <Compile Include="JSCallBack.cs" />
+    <Compile Include="Library\Languages.cs" />
+    <Compile Include="Log.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\Authentication\AuthMethod.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\Authentication\AuthNone.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\Authentication\AuthUserPass.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\IAsyncProxyResult.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\ProxyException.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\ProxySocket.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\Socks4Handler.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\Socks5Handler.cs" />
+    <Compile Include="Org.Mentalis\Network\ProxySocket\SocksHandler.cs" />
+    <Compile Include="Org.Mentalis\Proxy\Client.cs" />
+    <Compile Include="Org.Mentalis\Proxy\Http\HttpClient.cs" />
+    <Compile Include="Org.Mentalis\Proxy\Http\HttpListener.cs" />
+    <Compile Include="Org.Mentalis\Proxy\Listener.cs" />
+    <Compile Include="PhoneConnection.cs" />
+    <Compile Include="PiracyHide.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PiracyHide.Designer.cs">
+      <DependentUpon>PiracyHide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ScriptEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ScriptEditor.Designer.cs">
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScriptLanguage.cs" />
+    <Compile Include="Forms\SelectCity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectCity.Designer.cs">
+      <DependentUpon>SelectCity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SendGyro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SendGyro.Designer.cs">
+      <DependentUpon>SendGyro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Search.Designer.cs">
+      <DependentUpon>Search.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Military.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Military.Designer.cs">
+      <DependentUpon>Military.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Library\Settings.cs" />
+    <Compile Include="SocksWebProxy\PlayableWebClient.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SocksWebProxy\Proxy\ProxyClient.cs" />
+    <Compile Include="SocksWebProxy\Proxy\ProxyConfig.cs" />
+    <Compile Include="SocksWebProxy\Proxy\ProxyListener.cs" />
+    <Compile Include="SocksWebProxy\SocksWebProxy.cs" />
+    <Compile Include="Forms\User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\User.Designer.cs">
+      <DependentUpon>User.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AutoRegister.resx">
+      <DependentUpon>AutoRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CSV.resx">
+      <DependentUpon>CSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CityAndIslandID.resx">
+      <DependentUpon>CityAndIslandID.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\IslandsByTime.resx">
+      <DependentUpon>IslandsByTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ManualCaptchaInput.resx">
+      <DependentUpon>ManualCaptchaInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NumberPicker.resx">
+      <DependentUpon>NumberPicker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PiracyInfo.resx">
+      <DependentUpon>PiracyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectUsers.resx">
+      <DependentUpon>SelectUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Military.resx">
+      <DependentUpon>Military.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PiracyHide.resx">
+      <DependentUpon>PiracyHide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>IkariamPlus</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ScriptEditor.resx">
+      <DependentUpon>ScriptEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectCity.resx">
+      <DependentUpon>SelectCity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SendGyro.resx">
+      <DependentUpon>SendGyro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\User.resx">
+      <DependentUpon>User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Search.resx">
+      <DependentUpon>Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="development.ico" />
+    <Content Include="Mayor.ico" />
+    <None Include="Resources\piratecrew.png" />
+    <None Include="Resources\icon_time.png" />
+    <Content Include="Resources\icon_message.png" />
+    <Content Include="Resources\PirateFortress.png" />
+    <None Include="Resources\functions.txt" />
+    <None Include="Resources\about_blank.html" />
+    <None Include="Resources\Military.png" />
+    <None Include="Resources\Government.png" />
+    <None Include="Resources\Upkeep.png" />
+    <None Include="Resources\Gold.png" />
+    <None Include="Resources\Wineyard.png" />
+    <None Include="Resources\Optician.png" />
+    <None Include="Resources\Fireworker.png" />
+    <None Include="Resources\Carpentering.png" />
+    <None Include="Resources\Generals.png" />
+    <None Include="Resources\Wood.png" />
+    <None Include="Resources\Wine.png" />
+    <None Include="Resources\Sulfur.png" />
+    <None Include="Resources\Glass.png" />
+    <None Include="Resources\Tender.png" />
+    <None Include="Resources\Steam_Ram.png" />
+    <None Include="Resources\Rocket_Ship.png" />
+    <None Include="Resources\Ram_Ship.png" />
+    <None Include="Resources\Paddle_Speedboat.png" />
+    <None Include="Resources\Mortar_Ship.png" />
+    <None Include="Resources\Fire_Ship.png" />
+    <None Include="Resources\Diving_Boat.png" />
+    <None Include="Resources\Catapult_Ship.png" />
+    <None Include="Resources\Balloon_Carrier.png" />
+    <None Include="Resources\Ballista_Ship.png" />
+    <None Include="Resources\citizen.png" />
+    <None Include="Resources\Swordsman.png" />
+    <None Include="Resources\Sulphur_Carabineer.png" />
+    <None Include="Resources\Steam_Giant.png" />
+    <None Include="Resources\Spearman.png" />
+    <None Include="Resources\Slinger.png" />
+    <None Include="Resources\Ram.png" />
+    <None Include="Resources\Mortar.png" />
+    <None Include="Resources\Gyrocopter.png" />
+    <None Include="Resources\Doctor.png" />
+    <None Include="Resources\Cook.png" />
+    <None Include="Resources\Catapult.png" />
+    <None Include="Resources\Balloon-Bombardier.png" />
+    <None Include="Resources\Archer.png" />
+    <None Include="Resources\Hoplite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\cef.redist.x64.3.2704.1432\build\cef.redist.x64.targets" Condition="Exists('..\packages\cef.redist.x64.3.2704.1432\build\cef.redist.x64.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\cef.redist.x64.3.2704.1432\build\cef.redist.x64.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x64.3.2704.1432\build\cef.redist.x64.targets'))" />
+    <Error Condition="!Exists('..\packages\cef.redist.x86.3.2704.1432\build\cef.redist.x86.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\cef.redist.x86.3.2704.1432\build\cef.redist.x86.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.targets'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.props'))" />
+    <Error Condition="!Exists('..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.targets'))" />
+  </Target>
+  <Import Project="..\packages\cef.redist.x86.3.2704.1432\build\cef.redist.x86.targets" Condition="Exists('..\packages\cef.redist.x86.3.2704.1432\build\cef.redist.x86.targets')" />
+  <Import Project="..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.targets" Condition="Exists('..\packages\CefSharp.Common.51.0.0\build\CefSharp.Common.targets')" />
+  <Import Project="..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.targets" Condition="Exists('..\packages\CefSharp.WinForms.51.0.0\build\CefSharp.WinForms.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

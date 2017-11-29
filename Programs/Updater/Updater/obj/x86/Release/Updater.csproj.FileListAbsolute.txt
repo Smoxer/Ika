@@ -1,0 +1,15 @@
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\x86\Release\Updater.exe.config
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\x86\Release\Updater.exe
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\x86\Release\Updater.pdb
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\bin\x86\Release\NUnrar.dll
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\obj\x86\Release\Updater.csprojResolveAssemblyReference.cache
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\obj\x86\Release\Updater.exe
+C:\Users\Omri\Desktop\Ikariambots\Updater\Updater\obj\x86\Release\Updater.pdb
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\bin\x86\Release\Updater.exe.config
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\bin\x86\Release\Updater.exe
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\bin\x86\Release\Updater.pdb
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\bin\x86\Release\NUnrar.dll
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\obj\x86\Release\Interop.IWshRuntimeLibrary.dll
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\obj\x86\Release\Updater.csproj.ResolveComReference.cache
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\obj\x86\Release\Updater.exe
+C:\Users\Omri\Desktop\IkariamPlus\Programs\Updater\Updater\obj\x86\Release\Updater.pdb

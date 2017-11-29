@@ -1,0 +1,9 @@
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\bin\Release\IkariamPlus.exe.config
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\bin\Release\IkariamPlus.exe
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\bin\Release\IkariamPlus.pdb
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\obj\Release\IkariamPlus.csprojResolveAssemblyReference.cache
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\obj\Release\IkariamPlus.Form1.resources
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\obj\Release\IkariamPlus.Properties.Resources.resources
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\obj\Release\IkariamPlus.csproj.GenerateResource.Cache
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\obj\Release\IkariamPlus.exe
+C:\Users\Omri\Desktop\IkariamPlus\Programs\IkariamPlus\IkariamPlus\obj\Release\IkariamPlus.pdb

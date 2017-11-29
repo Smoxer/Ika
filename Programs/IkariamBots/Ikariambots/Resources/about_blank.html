@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<title>Ikariam+</title>
+		<meta charset="utf-8" />
+		<meta name="referrer" content="no-referrer" />
+		<style>
+			body {
+				background: url(https://[0].ikariam.gameforge.com/skin/rtl/layout/bg_maincontentbox.png) right center repeat;
+				font: normal 14px Arial,Helvetica,sans-serif;
+			}
+			a {
+				color: blue;
+			}
+			.code {
+				margin-left: 2%;
+				border: 1px dashed;
+				padding: 1%;
+				display: inline-block;
+				font-style: italic;
+			}
+			.title {
+				text-decoration: underline;
+				text-align: center;
+				line-height: 20px;
+				font-weight: 700;
+				background: url(https://[0].ikariam.gameforge.com/skin/rtl/layout/bg_contentBox01h_header.png) no-repeat;
+				background-size: 100% 100%;
+				height: 20px;
+				margin: 0;
+				padding: 16px 6px 10px 6px;
+			}
+			.button {
+				cursor: pointer;
+				border: 3px double #5d4c2f;
+				border-top-color: #c9a584;
+				border-right-color: #c9a584;
+				color: #542c0f;
+				display: inline-block;
+				padding: 2px 10px;
+				background: #eccf8e url(https://[0].ikariam.gameforge.com/skin/rtl/input/button.png) repeat-x;
+				text-align: center;
+				font-weight: 700;
+				white-space: nowrap;
+				width: auto;
+				outline: none;
+				margin: 0;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				-o-user-select: none;
+				user-select: none;
+			}
+			.button:active{
+				color:#B3713F;
+				text-decoration:none;
+				border:3px double #c9a584;
+				border-top-color:#5d4c2f;
+				border-right-color:#5d4c2f;
+				padding:3px 10px 1px 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1 class="title">Ikariam+</h1>
+		<form id="loginForm" method="post" rel="noreferrer" action="https://[0].ikariam.gameforge.com/index.php?view=city&action=loginAvatar&function=login">
+			<input type="hidden" name="name" value="[1]" />
+			<input type="hidden" name="password" value="[2]" />
+		</form>
+		<div style="padding: 10px 20px; background-image: url(https://[0].ikariam.gameforge.com/skin/rtl/layout/bg_contentBox01.png); background-size: 100% 100%;">
+			<div style="text-align: center;">
+				<input onclick="document.getElementById('English').style.display = 'none'; document.getElementById('Hebrew').style.display = 'block';" type="button" class="button" value="עברית" />
+				<input onclick="document.getElementById('Hebrew').style.display = 'none'; document.getElementById('English').style.display = 'block';" type="button" class="button" value="English" />
+			</div><br />
+			<div id="English">
+				<div style="background-image: url(http://ikariamplus.com/images/Mayor.ico); background-size: 100% 100%; width: 33px; height: 33px; right: 12px; top: 20px; overflow: visible; position: absolute; z-index: 1000;"></div>
+				<div style="text-align: center;">
+					<input onclick="document.getElementById('loginForm').submit();" type="button" class="button" value="Start using Ikariam+!" />
+					<input onclick="callbackObj.sendMail()" class="button" type="button" value="Report a problem" />
+					<input onclick="window.open('http://ikariamplus.com/');" class="button" type="button" value="View store page" />
+					<input onclick="callbackObj.exit();" class="button" type="button" value="Exit" />
+				</div>
+				<i>Proudly brought to you by <a href="javascript: void(0);" onclick="callbackObj.sendMail()" style="color: Black; text-decoration: underline">Maor Development</a></i> <br />
+				<a href="javascript: void(0);" onclick="callbackObj.sendMail()"><img style="width: 64px; height: 64px;" src=" data:image/png;base64,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" alt="Maor Development" /></a>
+				
+				<ol>
+					<li>
+						<a href="#whatsikariamplus">What is Ikariam+?</a>
+						<ol>
+							<li><a href="#IBL"><i>Ikariam+ Build List</i></a></li>
+							<!--<li><a href="#IBC"><i>Ikariam+ Build City</i></a></li>-->
+							<li><a href="#IPB"><i>Ikariam+ Piracy Bot</i></a></li>
+							<li><a href="#IS"><i>Ikariam+ Spy</i></a></li>
+							<li><a href="#IMC"><i>Ikariam+ Military Calculator</i></a></li>
+							<li><a href="#IFL"><i>Ikariam+ Fast Locations</i></a></li>
+							<li><a href="#IBT"><i>Ikariam+ Islands By Time</i></a></li>
+							<li><a href="#ISU"><i>Ikariam+ Search Users/Allies/Cities</i></a></li>
+							<li><a href="#ICR"><i>Ikariam+ Capture Reports</i></a></li>
+							<li><a href="#IAA"><i>Ikariam+ Attacks Alert</i></a></li>
+							<li><a href="#ISA"><i>Ikariam+ Scripted Attack</i></a></li>
+							<li><a href="#IAR"><i>Ikariam+ Auto Register</i></a></li>
+						</ol>
+					</li>
+					<li><a href="#requirements">Requirements</a></li>
+					<li><a href="#UA">User Agreement</a></li>
+					<li>
+						<a href="#Settings">Settings</a>
+						<ol>
+							<li><a href="#UserAgent">User Agent</a></li>
+							<li><a href="#Proxy">Proxy</a></li>
+							<li><a href="#IkariamPlusLocation">Ikariam+ Location</a></li>
+							<li><a href="#Cache">Cache Location</a></li>
+							<li><a href="#ReportsLocation">Reports Location</a></li>
+							<li><a href="#Cef">Cefsharp</a></li>
+						</ol>
+					</li>
+				</ol>
+				<h2 id="whatsikariamplus">What is <i>Ikariam+</i>?</h3>
+				<u>Basic information</u><br />
+				<i>Ikariam+</i> is a program to your computer that allow you to connect to your ikariam's account, on any server, on any country.<br />
+				You can open multiple windows on your multiple accounts (Just run Launcher.exe again)<br />
+				<u>So what? It's not a big deal, I can open multiple windows in my browser</u><br />
+				The short answer is yes. You can.<br />
+				<b>But</b>, in <i>Ikariam+</i> you can use in one of the many build-in tools that can improve your game's experience!<br />
+				Tools like <a href="#IBL"><i>Ikariam+ Build List</i></a> that give you infinite times of buildings to build.<br />
+				Or <a href="#IPB"><i>Ikariam+ Piracy Bot</i></a> that can do to you all the pirates missions, in minimum time, auto convert raid points to crew points and <b>auto solving captcha</b>! Indeed, it can solve to you the annoying captcha automatically<br />
+				If you don't like to browse from your IP, you can use <i>proxy</i> (in the Launcher.exe) in no time, just write the proxy address and port and the program will use it over your address! For example to proxy: 1.2.3.4:8080<br />
+				Tor is included, you can run it from launcher (make sure that ports 9158 and 9058 are free)<br />
+				Also, we protect your data, all the connection are on the SSL server (https) by default, and there is an option to use TOR as an sockets proxy bridge, as default write in the proxy address: <a href="socks://127.0.0.1:9150">socks://127.0.0.1:9150</a> while tor is started!<br />
+				<i>Ikariam+</i> comes with simple launcher, so you don't have to do complex things to start<br />
+				Also, the program will auto update every time there is a patch/update for the program. So if there is a bug update/problem solved/new feature, you'll get it.<br />
+				Here is a full list of all the tools in <i>Ikariam+</i>:
+				
+				<h3 id="IBL"><i>Ikariam+ Build List</i></h3>
+				<i>Ikariam+ Build List</i> is a tool that you can use for building several structures in queue, for infinite length, unlike the one you buy in ambrosia.<br />
+				<u>How to use:</u><br />
+				1) On any structure click on "Add to queue".<br />
+				2) Repeat on level 1 until you've done you build list.<br />
+				3) Go to Scripts -> Build List -> Start Queue.<br />
+				
+				<!--<h3 id="IBC"><i>Ikariam+ Build City</i></h3>
+				<i>Ikariam+ Build City</i> is a tool that you can use for create colonies when island is full.<br />
+				For example, the island in 50:50 is full, so when <i>Ikariam+ Build City</i> is running, it's search every minute if there is a place for you, and if it does, Ikairam+ will build you a new city right away there!<br />
+				<u>How to use:</u><br />
+				1) Go to Scripts -> Build City -> Start Script<br />
+				2) Write the islands locations you want splited by comma.<br />
+				&nbsp;&nbsp; For example: "50:50,98:5" - X:Y format (Without spaces!)-->
+				
+				
+				<h3 id="IPB"><i>Ikariam+ Piracy Bot</i></h3>
+				<i>Ikariam+ Piracy Bot</i> is a tool that do to you the piracy missions. Meaning, you don't need to click every 2.5 minutes.<br />
+				This tool works on all the missions, and have many more options, like auto convert all the capture points into crew points,<br />
+				or, auto solving captcha (with a special service, it doesn't cost extra money!), so you can leave the program alone and watch your points rise and rise.<br />
+				(And you can run it on multiple accounts!)<br />
+				There is a new option that you can run the piracy script in minimal requirements, so you can run even more accounts at the same time!<br />
+				Just pick the option "Massive piracy use" in the launcher - If you use proxy, it's must be socks/web proxy (Like Tor)<br />
+				<strong>Pay attention: if you'll do too much points per day, you'll get ban! Try to do 20,000 points max per day.</strong><br />
+				<u>How to use:</u><br />
+				1) Go to a "Massive piracy use" in the launcher.<br />
+				2) Configure all the users.<br />
+				3) Click "Login".<br />
+				<u>Captcha solving (9KW)</u>
+				1) Register on <a href="https://www.9kw.eu/register_131044.html" target="_blank">9kw.eu</a>.<br />
+				2) Create API access points at <a href="https://www.9kw.eu/userapi.html" target="_blank">9kw.eu/userapi.html</a>.<br />
+				3) Solve captcha for others at <a href="https://www.9kw.eu/usercaptcha.html" target="_blank">9kw.eu/usercaptcha.html</a>.<br />
+				4) Run the program via Launcher.exe and set 9kw api key and 9kw api source from the data you set in step 2.<br />
+				<br />
+				<strong style="color: Red;">De-Captcher supported too!</strong>
+				
+				<h3 id="IS"><i>Ikariam+ Spy</i></h3>
+				<i>Ikariam+ Spy</i> is a tool that sends you spies to select city and find for you the best spies/decoys ratio for your mission. Simple as that.<br />
+				<u>How to use:</u><br />
+				1) Go to Scripts -> Spy -> Start Script.<br />
+				2) Write the cities IDs (City ID can be seen in island view where the number near the city name is the ID) you want the spies to be sent splited by comma. <br />
+				&nbsp;&nbsp; For example: "16352,12345,54321" (Without spaces!)
+				
+				<h3 id="IMC"><i>Ikariam+ Military Calculator</i></h3>
+				<i>Ikariam+ Military Calculator</i> is a tool that can give you the exact generals/wood/wine/etc. that you'll get after creating the army.<br />
+				<u>How to use:</u><br />
+				1) Go to Calculator -> Military calculator.<br />
+				
+				
+				<h3 id="IFL"><i>Ikariam+ Fast Locations</i></h3>
+				<i>Ikariam+ Fast Locations</i> is a tool that you can use for jumping to selected locations in no time (yes, there is an option, but is limited by maximum locations).<br />
+				And it's with unlimited locations for your choice!<br />
+				<u>How to use:</u><br />
+				1) Edit config.xml from Ikariam+'s main folder.<br />
+				2) Add Like the example under Bot/FastLocations.<br />
+				
+				<h3 id="IBT"><i>Ikariam+ Islands By Time</i></h3>
+				<i>Ikariam+ Islands By Time</i> is a tool that can give you all the posible islands by given time and start points.<br />
+				The spy in ikariam can spy after troops movement, but it only shows start and arrive time. With <i>Ikariam+ Islands By Time</i> you can find the island that the troops will be at the end time!<br />
+				<u>How to use:</u><br />
+				1) Go To Calculator -> Islands by time.<br />
+				
+				<h3 id="ISU"><i>Ikariam+ Search Users/Allies/Cities</i></h3>
+				<i>Ikariam+ Search Users/Allies/Cities</i> is a tool that can give you full list in a few minutes on all the locations where a user/city/ally is located. Including occupation cities and occupation ports.<br />
+				This tool also exports all the data to CSV file (Excel table) with information like: Wonder and level, what is the buildings level in this town (if you have spies/right to see the city).
+				<u>How to use:</u><br />
+				1) Go to Scripts -> Search -> Search by ally tag/player name/city name.<br />
+				2) Wait until complete.<br />
+				3) Go to Ikariam+'s main folder and open the file Report*DAY**MONTH**YEAR*-*HOUR**MINUTE*.<br />
+				* If you have a spy/right to see a city, all the buildings in this city will add to the report.
+				
+				
+				<h3 id="ICR"><i>Ikariam+ Capture Reports</i></h3>
+				<i>Ikariam+ Capture Reports</i> is a tool that saves in your computer your battle reports/spy reports in a click of a button.<br />
+				<u>How to use:</u><br />
+				1) Open report (spy/military report).<br />
+				2) Go to Scripts -> Capture report -> Capture ... report.<br />
+				
+				<h3 id="IAA"><i>Ikariam+ Attacks Alert</i></h3>
+				<i>Ikariam+ Attacks Alert</i> is a tool that alerts you (by annoying beep) when you/some in your ally(if your'e the general) is atacked.<br />
+				When you attacked you can choose to auto active the <a href="#ISA"><i>Ikariam+ Scripted Attack</i></a> option!<br />
+				<u>How to use:</u><br />
+				1) Go to Scripts -> Check for attacks -> Check for attack on me/ally(embassy must be open).<br />
+				2) When there is attack on <strong>you only</strong> <a href="#ISA"><i>Ikariam+ Scripted Attack</i></a> will start automatically with the file "AttackedFight.ikr".<br />
+				
+				<h3 id="ISA"><i>Ikariam+ Scripted Attack</i></h3>
+				<i>Ikariam+ Scripted Attack</i> is a tool that attack (pillage raid/piracy raid/deploy units/etc.) by scripted order.<br />
+				For example, if you write:<br />
+				<div class="code">Set Hoplite 90<br />Set Ram 15<br />Raid<br />Wait 15<br />PiracyRaid<br />Set Hoplite 0<br />Set Ram 0<br />Set SteamGiant 200<br />Raid</div><br />
+				It'll do:<br />
+				* Configure to 90 hoplites and 15 rams<br />
+				* Raid with the configured army<br />
+				* Wait 15 minutes<br />
+				* Piracy raid<br />
+				* Configure to 0 hoplites, 0 rams and 200 steam giants<br />
+				* Raid with the configured army<br />
+				So easy, so you can ride others without even be there!<br />
+				<u>How to use:</u><br />
+				1) Go to Scripts -> Scripted attack -> New scripted attack (for new file) / Start script (open exist file)
+				<h4>How to write a script</h4>
+				<div style="margin-left: 2%;">
+					Every line should contain <b>only 1</b> command.<br />
+					<b>Do NOT take scripts from sources you dont trust!</b><br />
+					Writing "#" or ";" in the beginning of the line will be a comment and be ignored.<br />
+					For example:<br />
+					<div class="code">; This is a comment<br /># This is a comment too</div><br />
+				</div>
+				<h4>Full commands list (without quotes)</h4>
+				<ol>
+					<li>
+						"GoTo *Line*" - The script return to line *Line* (replace with positive integer) and start from there (every positive integer is an option)
+						<br />
+						For example:
+						<div class="code">GoTo 1<br /># The script will start from the beginning</div>
+					</li>
+					<li>
+						"Wait *Minutes*" - Delay the program for *Minutes* minutes(replace with positive integer)
+						<br />
+						For example:
+						<div class="code">Wait 10<br /># The script will wait 10 minutes</div>
+					</li>
+					<li>
+						"RefreshData" - Refresh window data (same refresh that happens once in a minute)
+						<br />
+						For example:
+						<div class="code">RefreshData<br /># The page will refresh</div>
+					</li>
+					<li>
+						"ChangeCityID *CityID*" - Change selected city.<br />
+						By that option the system will know <b>to</b> what city do you mean when you want to pillage/raid/etc.<br />
+						For getting the city ID you can see it in the island view, near the city name there will be unique number, that number is the city ID.
+						<br />
+						For example:
+						<div class="code">ChangeCityID 86615<br /># The selected city will set to city ID 86615</div>
+					</li>
+					<li>
+						"ChangeCurrentCityID *CityID*" - Change current city.<br />
+						By that option the system will know to <b>from</b> what city you mean when you want to pillage/raid/etc.<br />
+						For getting the city ID you can see it in the island view, near the city name there will be unique number, that number is the city ID.<br />
+						This city must be by you control, meaning you can see this city in the city selector.
+						<br />
+						For example:
+						<div class="code">ChangeCurrentCityID 86615<br /># The current city will set to city ID 86615</div>
+					</li>
+					<li>
+						"UpgradeBuilding *PositionID*" - Upgrade a building by his position.<br />
+						The position will be shown in the city view next to the building name.
+						<br />
+						For example:
+						<div class="code">UpgradeBuilding 17<br /># Upgrade pirate fortress</div>
+					</li>
+					<li>
+						"StartPiracy" - Start the piracy script (need to be on city view and with pirate fortress in this city).
+						<br />
+						For example:
+						<div class="code">StartPiracy<br /># Start piracy script</div>
+					</li>
+					<li>
+						"StopPiracy" - Stop the piracy script.
+						<br />
+						For example:
+						<div class="code">StopPiracy<br /># Stop piracy script</div>
+					</li>
+					<li>
+						"Raid" - Raid the selected city.
+						<br />
+						For example:
+						<div class="code">Raid<br /># Raid the selected city</div>
+					</li>
+					<li>
+						"Occupy" - Occupy the selected city.
+						<br />
+						For example:
+						<div class="code">Occupy<br /># Occupy the selected city</div>
+					</li>
+					<li>
+						"PiracyRaid" - Piracy raid the selected city.
+						<br />
+						For example:
+						<div class="code">PiracyRaid<br /># Piracy raid the selected city</div>
+					</li>
+					<li>
+						"DeployUnits" - Deploy units into the selected city.
+						<br />
+						For example:
+						<div class="code">DeployUnits<br /># Deploy units into the selected city</div>
+					</li>
+					<li>
+						"ChangeView *View*" - Change current view.<br />
+						*View* can be: "City", "Island", "World"
+						<br />
+						For example:
+						<div class="code">ChangeView Island<br /># Switch to island view</div>
+					</li>
+					<li>
+						"JS *Command*" - Run JavaScript command (Only use it if you know what you are doing!).
+						<br />
+						For example:
+						<div class="code">JS alert('this script work');<br /># Run JavaScript pop-up message</div>
+					</li>
+					<li>
+						"Set *Unit* *HowMuch*" - Set selected unit to battle/deploy/etc.<br />
+						*HowMuch* - (replace with positive integer)<br />
+						*Unit* - Hoplite/SteamGiant/Spearman/Slinger/Swordsman/Archer/SulphurCarabineer/Ram/Catapult/Mortar/Gyrocopter/BalloonBombardier/Cook/Doctor/TransporterShips
+						<br />
+						For example:
+						<div class="code">Set Hoplite 100<br />Set Mortar 30<br />Set TransporterShips 50<br /># Set to 100 hoplites, 30 mortars and 50 transporter ships</div>
+					</li>
+					<li>
+						"ResetUnits" - Reset selected units to 0.
+						<br />
+						For example:
+						<div class="code">ResetUnits<br /># Equal to "Set *Unit* 0" for all units</div>
+					</li>
+				</ol>
+				<h4>Examples to scripts</h4>
+				Piracy raid from all manufacturers<br />
+				<div class="code">
+					ChangeCityID 86615<br />
+					PiracyRaid<br />
+					Wait 21<br />
+					# City in the same island as me, so minimum time to wait is 20 minutes (10 to go + 10 to return + 1 for be sure)<br />
+					ChangeCityID 71622<br />
+					PiracyRaid<br />
+					Wait 21<br />
+					#Etc..<br />
+				</div>
+				<br /><br />Build list<br />
+				<div class="code">
+					UpgradeBuilding 17<br />
+					Wait 60<br />
+					# Upgrade pirate fortress and wait 60 minutes for upgrade to complete<br />
+					UpgradeBuilding 0<br />
+					Wait 180<br />
+					# Upgrade town hall and wait 3 hours for upgrade to complete<br />
+				</div>
+				
+				
+				<h3 id="IAR"><i>Ikariam+ Auto Register</i></h3>
+				<i>Ikariam+ Auto Register</i> is a tool that allow you to create a new user (from the same mail! it's a bug in the game) from invitation and do the tutorial all by itself until the end.
+				
+				<h2 id="requirements">Requirements</h3>
+				OS: Windows 7/8/8.1/10 32&64 bit<br />
+				.NET: 4.5.2<br />
+				Ram: 20MB (!)<br />
+				Available space: 100MB<br />
+				
+				<h2 id="UA">User Agreement</h3>
+				This program developed for Windows. Mac and Linux are not supported (although you can use <a href="https://en.wikipedia.org/wiki/Wine_(software)" target="_blank">Wine</a>).<br />
+				This program should not going to get you ban. The only way is if you will exaggerating and do something like more than 20,000 capture points per day.<br/>
+				In a case of banning from ikariam, I'm not responsible for any of that. 
+				
+				<h2 id="Settings">Settings</h2>
+				Ikariam+ version: [11]<br />
+				<h3 id="UserAgent">User Agent</h3>
+				[3]
+				<h3 id="Proxy">Proxy</h3>
+				[4]
+				<h3 id="IkariamPlusLocation">Ikariam+ Location</h3>
+				[5] <input onclick="callbackObj.openExplorer('[5]')" type="button" class="button" value="Open in file explorer" />
+				<h3 id="Cache">Cache location</h3>
+				[6] <input onclick="callbackObj.openExplorer('[6]')" type="button" class="button" value="Open in file explorer" />
+				<h3 id="ReportsLocation">Reports location</h3>
+				[7] <input onclick="callbackObj.openExplorer('[7]')" type="button" class="button" value="Open in file explorer" />
+				<h3 id="Cef">Cefsharp</h3>
+				CefSharp version: [8]<br />
+				Cef version: [9] <br />
+				Chromium version: [10] <br />
+				<a href="chrome://version">More</a>, <a href="chrome://gpu/">More</a>
+			</div>
+			<div id="Hebrew" style="direction: rtl;">
+				<div style="background-image: url(http://ikariamplus.com/images/Mayor.ico); background-size: 100% 100%; width: 33px; height: 33px; right: 12px; top: 20px; overflow: visible; position: absolute; z-index: 1000;"></div>
+				<div style="text-align: center;">
+					<input onclick="document.getElementById('loginForm').submit();" type="button" class="button" value="התחל להשתמש ב-Ikariam+!" />
+					<input onclick="callbackObj.sendMail()" class="button" type="button" value="דווח על בעיה" />
+					<input onclick="window.open('http://ikariamplus.com/');" class="button" type="button" value="הצג דף חנות" />
+					<input onclick="callbackObj.exit();" class="button" type="button" value="יציאה" />
+				</div>
+				<i>פותח בגאווה על ידי <a href="javascript: void(0);" onclick="callbackObj.sendMail()" style="color: Black; text-decoration: underline">Maor Development</a></i> <br />
+				<a href="javascript: void(0);" onclick="callbackObj.sendMail()"><img style="width: 64px; height: 64px;" src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKoAAACXCAYAAACFksDxAAAACXBIWXMAAAsTAAALEwEAmpwYAAABOWlDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjarZGxSsNQFIa/G0XFoVYI4uBwJ1FQbNXBjElbiiBYq0OSrUlDldIk3NyqfQhHtw4u7j6Bk6PgoPgEvoHi1MEhSHASwW/6zs/hcOAHo2LXnYZRhkGsVbvpSNfz5ewTM0wBQCfMUrvVOgCIkzjiJwI+XxEAz5t23WnwN+bDVGlgAmx3oywEUQH6FzrVIMaAGfRTDeIOMNVJuwbiASj1cn8BSkHub0BJuZ4P4gMwe67ngzEHmEHuK4Cpo0sNUEvSkTrrnWpZtSxL2t0kiOTxKNPRIJP7cZioNFEdHXWB/D8AFvPFdtORa1XL2lvnn3E9X+b2foQAxNJjkRWEQ3X+3YWx8/tc3Bgvw+EtTE+KbPcKbjZg4brIVqtQ3oL78RfCs0/+HAmzJwAAAARnQU1BAACxnmFMQfcAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOgAAFIIAAEVWAAAOpcAABdv11ofkAAAN5xJREFUeNrsfXl4FVWe9nsqyUWywE1CC2ELYZHdsEgjiLJIIzqiILZjo0O7PTPt1ujj0D3dLgPaM9OOI2Lb3c/XM0LjjO3YiiyOuGCDAoLToiQEZLFREpAlCiYkAclNp873x71V96x1Tt17E+LMVJ48t27VqeVWvfX+3t9yTpHnfruCggCEkPg/CIgTnwfAfXrrvfb+csTng5Z7k7hffzn47+J2/zedw4mqFvELKaXcJ7sdBeXXByz3lon7y/bA5RAnjg1HBqT2uw6cRA1KFXBF0IoA/mZMJLW7/U3EbAI4BIQDJSEk/hNJEsT+eppcTwnllyeunb88sUxsl+2DVAFKx3E4NgXgA1rVXmwrAlMLXM397higJW3H8vSbAWYlIJlroQIme38p4VlTBC2lFITGcePCje+XJo/nui6yJZCy/zasShTgDAFaab6j2HtyLo5BOiZeidrki+yqZVUGuBJoGfaklMKBw8sKGifMbE5/CiANJQMEcOqkgQRGombP9mPTb5LUoOecVX2WZIEJGZw+eBPY8PWoAFqluRe/u0C2D0bdf1jACrJAZFOVM6XTrm0OTnJu4E3TOSo9N6DliENgTSU4VSZfAVoTQEEAOAmNSmAAawhJIDpVSja1iAK0mRQg6TYl6aGVBkOWdjCCpZqDsMBktSsLTha4KicqiFHjDlHyN2ZzoLMELBDXDTaMGjYKkHmTT6wBRTLMuqmAmAgIpKFAm3nkikQhAlNr8kUv3+Dhu64bSErZnnfPmfjEP+toSfMBoSyWOU0SIDAKkJattQMoyRAwSVsQn2DmaXsClgapD6p2pgJMfpATBRfIcrLgUtffnwt+PtsHjIJVWRCL80Ea1pQgMEUB0mNXEq6FofmpU6fw8ccfY+fOnfjTgQM4fPgwGhoa4Lqu1dlEcnLwrfPPR2lpKYYNHYZR5eUYNGggsrKyzLgg+mgAtfpxmWFYLoiv8vJhYfJVThSjQX2PP8Gu7DwBAfn9iy9SlkF1rGoEbEAGS5WlsokEZJJBSQimJQA+2rEDb69fj/f/+7/xxRdfZMyUZmdn44ILLsDUqVMxbdo09OzZU8mENARz0vaSBFTWrlJGSsg6BWWcxPWu60rzLnXjoH/pxd9TFpyO42hBKjKnVqfaJgNCOFUZAagFCW17/33854v/ie3bt0tMkumpa9eumHnFFbjhhhvQu3fvQNNLLRDUHoDVpUpZ4LKgDQSsAqCUUlCXSmAlL/3+95RlU5FVVSANC1gxEiCCNrUQVXoMKq7/9NNP8a//+q9455132j1GWVRYiJtuvhk33HADOnXqlBqDthfDUnXgXwVOVpOGAagIVkopyMsvvUQ55rRlVYtYKwB/eyWjBkgBY3jKtNjEzMz6VatW4Ze//CUaGhrOaTh/7Jix+PGPf4QBAwYYwEZNtBcMWBoGl4biEypLAXad5yBJgGVByf4r2JRSCrLy5ZepBzSWVUHinpgRpEHxVZVuDZGtkp0qYgZoIIPy686ePYsnnngCq1ev7jC5p2g0ir/7u7/DFTOuMEQyk+yYMsMa2FWSPiaNqtKnGj0qATQArK1uKx9HZT+5ghQFAHVhrFRSrFKmSsmGJpCSUN79qVOn8NBDD+G9rVvRkab6+nr85Cc/QX1dHW688cbkI6wCJUk84qpoAGGvDNVHFSjRglW8D6oSPjE26nn7YpBfFeD3QlDSA0KSRSqUUiHXDyJ/OnKYyghSBcOqogGhPH9CggFK7NcRAI2NjVj4ox9h+/bt6IgTpRQ/f/xxUADz5s2Tf5fOtFMdKD0wK9Z5gDbKieR9oqA+iOKbyuCkUABWYGQHjgzWRBGKnwBwEM/1q9iU/WSBKwJSlxAIlWZlCVNiVQsWJeHYtTnWjAcfeihtkDqOg9zcXGRnZ0vrXNdFLBbD2bNn0zrG448/ji4FBbj2mmsEJiWCPlTHUGkYqWCQAhKbssD1gEggV0Qhzo78rY6zqQqsLJv6mS9ChVx/CFYNBKlGt0oAtdGqhIQDqGH5U0uXYtOmTaFBk5WVhREjRmDcuHEYMWIE+vbti4KCAilw793UlpYWnDhxAgcOHEBFRQU++ugjfP7556GP+9jPfoa+paUYM2aMlknVbKlgUWLBrqIUoLz149jUC/B7ZjqpB/T5e4FNObBq2JQQArLqlVeo4ziSx6+LAASlWW2LV0wxVSQekFAsagHo119/HQsXLgwFlNzcXFx99dW4/vrrMWzoMGRlZalrAlRfKa8933tvC373ny+goqIi1DmUlZXh+eefR2FhYTAzapeHZFcFs6ocq1Rip6Jj5Xn1rCPFLvPDU6tXraIsILOcLGUEgAOuIQLA1gL4ISo2TRuUqUo4cRypBmpVoi5oEtrW1tbihhtuwJdffmkNkClTpmDBD3+IYcOGIUxxS9DU2tqKNWvWYOnSpaEyXn/5l3+JRYsWWQNTgprOrNPg2GyY8BQLQIAJTbnU/27j6XsA9YHs0rjXz5p7yeuz0KqhIwA6s+/XHRDB+jv2LKph1l//+tfWIM3KysKCBQvw13/910rTnk6m13EcfPe738XEiRPx05/+FNu2bbPabuXKlbj22mtx0dixaTIptXbC4mZddqiUzpRn/lXV+kwu38bT546TODMnyJlSATaoJNDaoXIYaUE8hnYAEv9M7o/ASTA8t4w4cjvigHj7AoGT+CeE4OOPd2Pt2rVWgMjJycETTzyBO++80wcp8f+FcscU/r1te/fujd/8v9/gqquusmbiXz7zTMJCETjseXm+gvebvT/iwCEOHPY+OaplXlvhfjr8dSYOf//j19xrl1gnFDVJRU7EUSeMVBhkGMERs0BG54oQLWBVYShW40pVVx5ws2Q9nOWDjwWKxtQLjQgB4JD4PyH47YoViMVi5qQsIfjHf/xHXHPNNT74/ZvlOFq541j8q7bLzcvFkiVLMG3aNCuwbnv/fWzdti3+AxkQ+Q9C4jcTAv6iEaKIKROxSeIB5zd1RD/Fm2eBqcJFoq0EVgEjSlwoPrNFsx8Uqgoq4bOtAWCdJ8KyjBRoFo6nNOsa0DLTwc8+w4YNG6yAcPddd+H6669PKfOVWs6cIqtTJ/zLv/wLbrzxRnzyySfGzV588UVMvuyy1My8QnOq2ngyQOp96iaLplkP3zP93j1l9avvxXshqoQn74WdfHPvHY8kowXspyOa98AEAOsoCayalJ6G2lXCANpJmBufFRlzI5h7pam3aPPGm2/izJkzRgCMGTMGCxYsSDKJ9y8xokBWqf4z16W4qAiPPfoosgP0sDdt2bIFhw4djrO9lZnnTbxNG2mZ95/lJK0WY/q5e6ow/SyzJp91Ipl5f38K7DkqgHLOjqhZCd+ObcNqVKWXT3jvngWoHmxEcq7AnrP/cAiVWISg1W3F22+/beU8/fjHP0YkEvFvHrx/hb4khJUDKfwTR9K5F0+YgOvmzjWe65kzZ7Bh4wbPLicAIpp5zsEAt0QpBYjiQfLklwBWX24IgGOxIICVXeeBkcMCiBJjXEpfVaUkZog4UAJ2GjUgnhp3oMDdfB+kzIUiCuAqvzus85X8/tlnn2H//v3Gmz958mRMmDCBARLPyn6c2aBViYUuZVmLOMl9O8TBD/7mb9C5c2fj+b733nto/fOf9Q5Swll1glhS8V1yEFlHirsvjsyaimW6/nZaJwoK8HrREtUToUpxSiEqsb2gV7UFLZ5MEEEKnmGIx7omkAZ8r6ystHKibrrpJiU4VaAUwSv+s8ypa+MoPGziEFwweDAmT55sPN+9e/fi8yNHUgJjqO8eKAXLF591ZNbUePwiaypDlJowqS85RW9BBVBV2CAoChBo/h0BUF6c1Enu1yEETlZWAAgd7Xc2fLVnzx7jTe/duzcuvvhiPsTFRCUcqFgyM/qUiwwkjjfzipnGc66trcWBAwc4NtWzq3q9PXjjIUKHLXT3HgwQOXQVYPaDvPwgrAFg4qiAUp/qXGCJTQE9tYuevgfIuFgVZAHhslNESgAI+lTQq6x+/eyzz4w3vfzCckSjUS7ERRKxXsKEuHhGyYxGhRBaIg7Bt8d/22j+KaVxoEL0GzQ6VLFe1rF6zYoEgzqCCYejAJqAB5U0TAVr2aIuVelT3acETmgiAYRwBSY6kIqglB0pBSi1oSqC2tpaI1BHXjhSG/4ylRIGZayoqQELFSaz1LNnT/Tr1w979+4NPMbnn3+edEi9EBOJF5wkQ0eq715bgFCiXuddi8R34megCBxmsBZKaRysbjJM5RekMJkrLzQl1pn6n+AzUuJnPKsFdXcP1Uh7qhSrrju0HG8lMiA1ICVKb98OpCzLNjY2GkFVWlqaZDfw+0iynlh7YBigw2KkGSkAn1h33nnnJXumBhVY19WrGTEMe1oya9KaMI65KAWCMlIqMiQITNuLWMxWRbXF9JXyu2p0E6ICjpctYbxHogZu0ixAMP8BIFWFrhLzNo5UNBoNqOJKjVGtKFfDqADQpUsX4y7ONp+NxydZNpXYlWFPdjzTkMxKKIVLaTLW7cYz9mzpn18+yAxF6e+XPYbIuOz5EcqVFbLfs43awZByFBlY1Knq/k8CSMGOv0o4ZtWB1MSqSIyraZPbd5RFLza9XEMC2FBl73U5URVjq4qz/Qdea975dYQx52HAmrDwyWwVceBQFVhlzcNmnVhTz55TULd0D7DZqp3a6lRlcFZiVgUoHcJ12EuWAxKBWS1BqmFVmxt+5swZLVtnnFWJQlQpipttegbk5OQkb7hnwkOzqR1YiUMASkCpy6RPHRDqxtf7YOS6akmsKlVFEarVpSLrZkv1aiRApyp0rK57s7I0T6X3HCIxLXNPQ4KUB7ZN8PyLL74IAKihK0wqQw5RTQe9BGhb3VacPHnSuJv8/HwDQGU2tQMrS4rs0M/xEJHrMWMCbNzv0fS/UjFpkuEDO8f4eMrWDVAWVJuq25k2ceAHbInWeSIMs6qAqWP7IMAWFRXh0KFDgTf8wIEDgeEwWylgz6oyo7IFHk0NTaipqTHupnv37rwzowKowKYiWBEAXJdSJcs6QBKsTAEL11WF6SMlHlsHWtbMqwDt2Jus4AiAyBCQbriiuwnnPClAyqb2bEHKPCR9+/Y1/rSKigq0trZyTp5U9qj0/BFuTFkhFSleS+9h3b9/P44dO2Y877KyMsG7J8bREoPmIcxzGS+o71vixgU/v8Rcaa6MowrfnSAWtQGwcoQTojg/hwgle+pYKaDupRpUi6CbHzx4sPEn7N69G9XV1ZKckMGpKJhOkVEh1kEwP/3dd981OoHnnXcehg4dmhGA6q4xV9joOEJIS8w4Cft1gke7UVle0+SYAJrSoGWQ445iXSnnTAm6lAWz2KmQTf8pC3qZ+dGjRxvP9vTp03j11Vf97Ryph4HDFbrY5PudMHl+J3mMWHMzXn31VeM5DxgwAIMGDeKKmE3XQtlRkyn9S84Tbj6JA0diXAbJPuNZjXVr/UwTNaPaOFFBLy6T8vxK7BK1StDoUrmNPcOOHTsWxcXFxgvy/PPPc8kBrkDGIgkQ+jmWIiHx6bV167Bv3z7jLsaNG4du3bqFk0Pi/SNQsiQEOeEQolZupmFCNcMyBQ2GF4Q7J12kBz4Fiby4CZjQzJPAef0N8UBVXFyMSZMmGX9PTU0N/u3f/k2qi5TAGSI7ZZ+Vii//+uuv8dSSJVbX/4orrlBUtqnnVUkZHShJwL1QZ7WCYebXNITETXigpmf1A9lUt9RhTQxM4FWDlG177bXXWp36008/jV27dwlp2NQYlaTAqE8++SQ+tqj2GjBgAC655BJFxlANOjWbakCp8wm0YArHqqnHnlNkVFttKlfmw54pFWbehlXF/U6fPh0DBgwwnn1jYyPuueeeuARQOlZEGUMOneuXbSLWrVuHp556yuoqX3/99SgoKNB67ioAmtg0rBzQsiohpqHqUp6cNsJpiDiFjclPnVXz8/Jw2223Wf2EnTt34o477sDXX3+tGGhYGE4zIDpHgi6HMCbCtq1bcdddd6G1tdV4foWFhZj/V38VaO5TYtMAUNrcP5IWLtoVqJrhdJQOV8C8CbxKQAebfhCCefPmoayszOqXvPXWW5g/f74/WIXKsQpiVHUfKzWjvvHGG/jevHmor6+3Orc77rgDvXr31oIuEKxEPYqMWQLAwLZhXKJzDdRQ2tSGTYNMfjCrqhyBaNeu+MlPfmL9c9avX4+rrroKW7ZskarETIxqo1Gbm5vxxBNP4Oabb0ZdXZ3VOfXr1w933XUXAxRi7QSp2gYvQ2hWbWut6rQ1m5KwbGo0+WZWVTHs3LlzcfXVV1v/qv379+O6667D3/7t36K6ulpR04DQGpVSijffeANXXXUVHn30UasyRG967LHHUFRUJBcDBZn7IDa1XZYxVk0PrWTda69RPxCdJQyUphjlL0scYof57rD98hMZDXF4Sm7gNG+5N7o1knWoupoANl4rZTmCIgCE4MiRI5gxYwaOHDkS6iIVFhbi6quvxpzZczB6zGicf/751tvGYjEcOnQIGzduxMsvv2w91pRo8pcsWcKVwynnudI8eb044p5xW5ociMLfR2IwM2+eHQiNGygtUbMaHwDNBaUATQx4phqtzxsordVt5Za7rhsvaUwbqEInPB+4gA9aP6bqZUYYQLJ9pFSF1FKfKyVwBRlAoAX2pk2bcOONN+Lrr79O6cnu1asXhg4diqeXLkVZ//6Bbf/jP/4Dv/nNb7B//36cPn06peNdcskleOWVV5CbmxsAUBXw2BpRPQhtQBsfoY8ZPYUFsOtyy10fqDQ++inbxk0dqE7GzT4JuZ3JWZKDeSGdKx64U6ZMwdNLl6b8ztUjR47gD3/4A748ccLYtqKiAjt27EgZpCNGjMCKFSuQl5cXHNAncgWbtfNkGLLTrFUDohsZNP8ZjKMq0w0GZwmWgA1YpzqGQb/e+L3vYWkaYI1EIv6AvkFZKO07oyym4cOH48UXX0RJj5LQMVLl8J2aIT1Fx8oOtNA6cG31jmMng4RqlXmCNTiD2FRuQ4gdmL352269FcuWLUNeXl5KPz07O9tYQZXqgzBx4kSsXrUa/fr1C+k0BWeTtMBMiVVteJJkzJ9yMoVSYhuSUgEKYdnUAujEAGZC8N3vfhdr1qxJlsyFmGKxWPy/OZacZ/5bWlpSekXl9+d/HytXrkSv3r20YAwEIbFgRwUwA1kVYaQAMZj/1KZstMFENOdurr5JjU2DwGmSCBMmTMC6devw6KOP4rnnnrMCV0tLC37wgx8gPz9f254QYuxdwE59+vTBI488gptuuolzbNiq/GRf+WR1vnIZ4Ffda9f5/a1IsrMT/64IMG+NEF69wu+LWy91ZznXQE3b7MOaKa3ZNBSrJpd2794dv/rVr3Ddddfh5z//uTGERCk1DhBhO3Xu3Bnz58/HAw88gD59+gQDlAEYv0wPTAleAcC0aaMbXSPgtWq2DdueUYntWgtNqloXjk0tGVfhZE2fPh29e/fGhAkT0NzcjPaYJk2ahKeXLk0Skg6g3Mgj9owZjlVVbQTwapaZoJouwzoZgyYJNuu2mjQQ/FZsGkIOKApaHMdBe045OTlCjwebomcLbRp0i2zaBDlVmlqAYFmXnleV8buiLzSxPE9ClGC2M/H2cgAaVvUCze01sf2jjGBVjk6jj1bKsdWgttJFCW1CSQa8+8wClaTyhJi9/SAtCpu+OMQewETDqp07d8Z5553XbkDt0qVLKDYNCjfZsKqWnQMjAlacag8Y0l5ATUmf2j+CNvWNzLgrFsxrz6q9evXChRde2G5A9d6IkhabBphwCcywAbGN52sw+Wkb+7Yw/WnrUzuzTwLvBAktB1T6NRKJ4Kc//WlaWSXbacKECdxbWEjQMEXQDf5hYlWivYjE1vwr+aZ9dWrmPYeQ+tSGAcVLSVJ5iKycqyTL/fu//7tVF5ZUp7/4i7/ACy+8II3cRyzTmGHMvP4WECMww6o9fee/cxVHzXBQy6o7g5QYCDb/wfvUF10TEMyePRuXXnopNm3axAXuU02LevHXTp06oby8HJMmTVIPtaMKG2mW6cJA8if/ukYpkB8QP5JXZSLY1GGBGmDuwwDWZLM0Zi9wUATNmLAAUFxcjLnMK3WU43GlAFYYYqZcoJ2Jn0pDOupipdKnBsGGS6wEaFAGqw0nJ00ihG3Jl3kdscJiRmQJMevWoHkTSIOjbySl46nNfubsGknFkUqJXVK7oU5bs6g5RKUDrB1U0wK0Kgpg8UuIoaMfDF2kCQlnRYLioKkD0PJ6ExuNm0n/vg1MP0lpSapm3fLJt9SvJrZTFbE0NzcjFotZj/7BTgUFBVqzrywyQfBozNY6VDDLcmpUK2xDWXN1c/Wxz41GJaEJNc1nzzL8YgpfWZNufIj1p59+Giss31Ktmnr16oV//ud/xtixY80a1QYQtjo0WbEi5PPDw0baQrUL3W7TlLHnyOsn52RTo9cvxCS96fXXX8ePfvSjtA534MAB3H777diyZQs30on6JyoGubXw+tNDXbtt3B7OFLEju3OEvbQIOiBAXVFRkZFDHThwALW1tdqRCFXHJyDn/CKlfD9J5vbsnKsf0+EmotesM2bMiFc5pTlNnDgxPgo2sYsI/E+4sB26wv9/GtjHjx+P1atX47nnnkNTUxNXCmjjTLW2tmLw4MFYuHBhu6RmM3k/aAc5l+yOiEjSAYE/c+ZMzJw5Mzg6IHwXnaO2Lh/MFLCsXpHZzgh2vilPdjrtSTudS6aSAmjn3/tNUBffCKDSNNvTdjqXMAzaludE2/j6/u8BKm2fC3cuboA0zlMHfqBT3s85uLAdypmi3yAn13VdPPvss3hvyxauz1Nrayui0Sjmz5+P8ePHswj+xnnsHemMs/83gsz2B3hvmlO1ffzxx/HQQw9pd/fSSy9h06ZNGDZsmHzTqZ10+MbY5XYAu5PRw9JvoEbyz5kGnhALopY/t+CVV14J3O3Jkyfx5ptvxke+E7UrqDU4aaoXtSP4CBnUEM437jnLmBCjMkAVQFJNWVlZGDRokPEQQ4YMkR0dCwkQeE6ZkhD0nG18jky/zuZTc9vU5EJiK6lAGIbCDL697bFZ8+/NE0LwD//wD2hoaMCOHTu4cVxd10Vubi5uvfVWXHHFFdZRAVvni4qalwqMq/0UgU7ThycNgWF6DoFKLZeQVICv+RQX6zZkS97in7rtgkHp31xheVlZGV577TUAFm+eVrzqmwOmaSTpgGtPBcalWqRqlpoAnhbH0oxhtQ1Nv/5xo1bCxu7KpXV9LUNJJvPNDgnuj8jM/oMatrcLeYUx+/bXxXC9AyU0zTx1ZgyoNIUTo+GVd5oPeLDjRPUPDLVkt1SD+bbmX7V/eXjzzNEJNVlJmuL91TWibQ3UNC4HDQHQlK6upNuoAExqBK/kdRvAaq0tVd6/bt+q41O900U1v9uoX1ORddSWWTuaM5UhLyxQy0oC006HBu/Tc6posuZTtUylXQGu/1LoLBTlHxlt+IoFsoXXT8PqVwvg0tToswOYflvzmo4FEBlSuKI0hfOR2VUVqrI00Ug9RUpNIKVU7+ErzX94GUB10KY2ujQYr5RzIDsao3LUxXwRPHV2oXIT37vm24if9fX1qNpZBRAg2jWKUaNHyeGnBAuKbPvOO+/47Dh16tREm+S5aD1/zXcA2LFjh/+ayMLCQowZM8ZKz1rrVWZZRUUFKioquDf+RaNRlJaWYurUqQEyAFrTLX7W1FSDAijt29fK3KtVHLVko3YCanD4SQatenV8pqqqCv/12mvYvHkzqqqq8Pbbb2PUqFF+81/84hdYu3Ytdu7cye0mGo1iwYIFuPXWWxGNRqXD/Hb5b/HOu+9g9erV0hmOHj0at99+O2677TYlQHXgXLZsGTZs2KDMUBUWFmLu3LlYuHCh/w7W733vewCAMWPGoKyszP+0caoOHjyI5cuWY9nyZYHvTY1Go5g9ezbuv/9+lJaWBpt/Gn/gd+7cierqatTX12PTpk2oqqpCfX097r33Xjz04IP+1lVVVdiyeQs2b9kMALh00iT84M477XLDGRAMKb4QzUm+rc9x/JeasW/uA4As3QvRCEFDQwN+/k//hEOHD8ffOaqYVq5cicmXXYadVVW4/fbbUVNTE/hjotEo1qxZg9GjRgGEoLKyEgsWLEBlZaXxQkybNg3PP/88CgsLkxdHHPaRABs3bsRdd92FgwcPGvdZWFiIF154AQBw5ZVXSuvLyspw+bTL8djPHvOPK4L0ySefxJNPPmn9Yl9vuu+++3DfgvvQNdqVlzyJz9tuuw1r167Vbn/ZZZfhpZdewubNm/HMM89I9+jSSy/F7373O+0L0djltLWVe4uf69L4W/za74VomifHQqfu2rULv3vhBS1IfRZ95hlMnz7dCFIkJMEtt9yCuvp6rFixAtdee60VSIE4AO+5554A80vx7LPP4sorr7QCKQDU1dVh3rx5eOKJJ5TrDx48iGeXPevvTzz2Pffcg4cffjg0SAFg6dKlmD1nNurr65VxWI9xddOp+nosXLgQN9xwg/Iede3a1TbSeC41qqrUKJxO7evpn4DpjjvuCH2TqqursWjRIqxYsSL0r1q1ahUqKiowevRoyctftnw57r777tD7rKurw8aNGwPbjBk9WgLpww8/jOXLl6d1cysrKzFnzhz/+KxzVl5eHrjtzqoq7Kyq0q4fOXJku+nTjHn91nkdxru2AWoqTAIgJZCyzCqy22cHD+JBX69ldiorK5OiAKtWrcKTTz6Zkf1XVlZi8eLFUuSgX79+GbjxtF30aXpAtYxX0LY8+zaY2D78nu5KRSOGAaofW03c+Icffjijx3j66adxsLqaA1f5heVtEZVMMR55LuKogk7Vx1apUufopvLyckyePDn0uUSjUUyZMsWaQerq6hIATbLpsmXLrLYdM2YMpk2bJoWnwsRWly9bbqWBo9Eopk6dykVFArX+L36hjAJkBJzCvW4LDnIy9QzRIJ2iMf+ezjEBdPv27Xj77bexcuVK/OEPf0A0GrU6w0WLFqG6utoPad1yyy3GbUaPHu3fSM8M22yzZ88ebN26FevWrcPWrVuxZ88ef19BE/sAUUqx8Z2Nxm0WL16MQ4cOYc2aNdi0aRPWrl1rvCZr166VYqomnZoaFmibgNbJ2PmlYv4tQLp+/XqU9i3lnID58+dbhmcWcHpz8eLFVkzF6lPTcD6jR4/G66+/zsVEPZOuWq40/YzZNzleixcvxv3338+d4+TJk7FmzRqj3n930yaOTaMhLNq5NPttZvqVYptNU1qe8KxZs7gLSy1DKwDw/e9/nw+VUYpoNGptKj0gmMzwAw88gK5du/JlfYn/rl274oEHHrC+0fX19YFauF+/frj//vuV9aujykcZLUZNTY0yHRs0Pfjgg9i2bRuOHDmCzz//HIcPH8bhQ4dx5513Ku9xW7keTiafJXsQ0tQPRakVUJOZGSqBNYx2NDHqddddl9Z69lg7duwIbDNnzhxOz7KVVRTUqOHr6+uV9QNBRHH33XfHr6Wlhx9s9lOHcRt0RUkuoIi/t9OPo4rztqws5OxDMbqiGsoGNGKFlIl5dZPJYQxTKsg+ZFRRWWV6CHlgmyf2fVvKYhMaVISSObPfdqbfxqkCTWFXNPxphB0QgpEoNtuYpIFtFgsWgPUKUZTZM0qtQ2ihDTSl4e5nG9h/J8OolArxpJRqmKo0mrq+5cr5QoA1mbeGFUutWrVK0qZsVxSbqIFnzk3HWrNmDc+KDEgpgHfffdfMyOmUBQawqflRoOcaqLDoOkNTOmHOiQqq0rdgx/BsHAeaKcS0ZMkSScdSJmKwZMkSK5YEhdHRq66uxtKlS/nOggmQVlZW4rnnnguOolx4Yfg4aibYNAMMmyHTH8yq0LBqaLCFlAA0RbCyzDtlyhSjgzJr1iwsWbIkbuYpRX1dHZYvX45Zs2YZzXFlZSXXAXDOnDmB7RctWoSnlj7FgXTTpk1Gpy0ajeJCL26aQifB9Ni0wwAVIUfFCHmhaABoQ2jNMJX5numeOnWqsW19fT0eeeQRjBw5EvkFBejdpw9++MMfhk67UkqNDwYQj6WWlZVh9pw5mDZtGubMmWM81jXXXBM+hGTJpjTDAZ42dqaols3UWjU9CRCGTcM4U3V1ddx25eXlVuBJ/bJRzvO/5ZZbrNK9XqGzbRnjvffeKzAhtb+jLLi5ednStVUfq8x6/aG0avgb6u3Bhqn8mKEA1lP1p8ymGMmCFI/B2mryi0UY0C5atCijx7j33ntRWloq6dr0jWXba9O2DU9ZRwBoKIB68zZF1B7TiOa+cmel9Z3xti0vL8fiDIOHdZCSA1XEp9nXzsZ9992Xkf2Xl5fj3nvvDR1DBYBTp07pM0+KuGlb9lhts16oNqxKbXeXoiOWythOrMfP3qQF991nVdQiTqFkAzOyyt///d+ndDwRpC+//DKXdAgzOmBVVZVdQL8dBkxpA0a1iavSULvi0qAhrwAbE7WKoyq6RXv7WLp0aSizbNteZFRv2ZIlS/DUU0+FSvuy5l4CqWqcgFTuqyQdaJuXF7dDZkrDhNQivQj1hbUBXNeuXQWg26UZveopFuAsyy5YsABrVq8OZMopU6bg3XffxS233GKMjXLrqZxS/f78+fjoo4/wyCOPGJ0sb6Tr7du34+GHH9aDNDFvuv7+esHki/eRtjGbAin3Qk2+OdlhepY6xOHW+b1OgcSyxPrEd/YtzLt37caphrijc9mllybXAVzO3ea14ezoeuL2p06d8rtbq/L5o8rLEWV6oqr2yerLyspKVDMO0ezZsyVAVVZWSg6gD3SqG2pIsZRSVCa6N9fU1PiA8/r1X3bZZcp92oxvVbVzJ+pPxa//hSNHoosPUsClbnIb101aG683KXO+Xk9T7xy83qXsvEuTPU9te6G2HVBBcObs1zhy5AgIgFhLC+rr69GnTx8MHDAgDkTAB7MHBuIkX6rrdbVmARUIXA1ApW0038VQT6dOnfyhzWXgItRryYNDOAgH2qDvksOjG9+KWoafKJ+qZWPSrgtXSON64M00UNt07KnTTaexe/dubln37t05C0E0vVflaitmAF7FeKWeeSaJNymL24BSH8i673/84x+5c+3VqxeGDh2afJE6QWpa28JbpDagpvIQ7hQW4LMGabDDRA0mv/Z4LZqaGtGrVy9EciIZxVJ2igG0lEMAkUhE7lpNGcC4rs+kceARO7BC3Y4HZBLIrJPmre/VqxeOHDmiD7NRgVFNA/iGAWUQqyqX6ZnTfp39PsDofF34pa7uK1Tt2oWPduxAJCeCaGEUky65JCMQSolRtW8LkRhOnvLy8mTmlJiUcmDSgRUWbKpaB6HelGqCi506dUq+256YwZtxVjUBNIwMCGTVAJAqvXpqdKBiLTHEYjH7EbQN1skxedtW64TQkdUIzpQav3PjmmoSBVz4SUgQsLFQqmgrxkrFqVu3bvF24Ev40gYnBT8qNRRgE0eqFkNYVBgZUFovt00FpN7QPOx619LyRiIRCYgU5vFetaafUqo1YUHsyU4tLS04dvw4/tzSAhCC3j17Bd4nkmCqQ4cP4fDhwzh06BAAID8/H4MGDcKgQYPQKRIBBdDU1ITGxkbfREciEXQrLvYZ8eixo9z+e/bsyUmB6oMHUV1d7RcxFxQUYMjgIRg8ZLDPmkQX33RdjlEbGhtx5MgRNDc3+/vq1asX99Zob+TBEydO4MSJE2hubkZ5eTmam5tx8OBBf9v+/fujoKBAy6gHDx5E89mzGDxkiP+9saERFBRlZWXxbRPgOXHyJI4ePQpQoKi4CD179pSAGIvFsGvXLtTU1KCxsRFAvMvOoEGDUFJSIoE01tyMY8ePAwD69ukDUODQoUNoaGoCAAwYMCD+enjF8O/e8b748stEKLILsrOzQ1tupUa1BaUY9zv8+WHs278fLS0t/qo9e/Yo436s1/jhh9vx6aefcuubmppQUVGBP/3pT5g+fToK8vNRU1PD9ScqKSnBd77zHRBK0djUhPXr13P7mDVrFoqLi0EosO3997F//35ufWNjI7Z/uB379u/DlTOvREGXAm1lFWvit2/fLo0k6EmEb3/72xiSANSXJ07g9ddf9wHpTTt37uSWffDBBxgyZAjGjRvnA33fvn3Yvn27365bt24o7tYNW7duxYkTJ/xtP/zwQ1wycSJKevbEtm3b4iAVHtYZ3/mOD5+TJ09i/fr1iMViXLuamhrU1NRgzOjRGDZ8OAD4199r26NHD+Tn5uGP2z/AV1995W+7d+9eTJk8GYXRQmzavBm1tbXcvuvr67F161YAwMQJE9CtWzceAyGsk2NtqhQABYDjx49j1+7dHEjZOKNu2rtvnwRSEbCbN2/2R4fTnVZ+fr603LvJVbt2SSAVAbvxnY3BEiCxfMOGDUqQesfbsmUL9u7dC0opiouLJZB+8MEH0jIPmBs3bvRNd3NzM9fuxIkTePPNNzmQetP2Dz/EW2+9JYEUAI4ePYpdiYhLrDmmBCk77aio8GsoIpEI1/b48eN44603OZB6jLlt27YQRdjm7KGuraMb3145yCyVl+//5JPQ+qy5uRn79u3zFxUVFmLudXMxa9YsDnhfffUVDhw4oN4NE39T/fDms2exa9cuf1lxcTHmzZuHuXPnJk1mAgj79u1LxgOF/biUYu/evVZ9n9577z00NDSAUspJAdN05MgR7N23zwe57sFTmVbPhCNAuuz/ZD8HvPHjx+Pmm2+Wei9UVFSAui4iOTnW5950+jT3QJvMeND7FHQYo5TCkdBL7TO4J06ewJkzZ3iTU1KCCRdfjPLy8rh+USD1i9ovuAs3ZOhQ5ORkIxKJoEePHlzrkydPWjlkEqMcO8YdY8SIEcjJyUGnSCSux9hjKNiKPZDKrM6cORNTp07lQA8ABz/7DNAA7qKLLsLMmTNx0UUXSUD2egeoHryePXtixowZuOCCC5QOy+TJkzHh4gna68RWmxUVFflvHSwRrnVTUxOampqUVqpv376YOnUqFwdnp969e3Njy3oRnuHDhmPYsGHIy8tTkiE1DrFH1Ro1/lI8fsRlShJIFz4bGhq4nebm5mLs2LF+hik/Lw9bt21TmHWeBfbu3Yuqqio0JUS6ePHEm+6xCAVwWsUoFBLT7N69Gzt27FAyUGNTU4C8oBybdopEMHXqVB9onTp1ir/z1GPHo0cxkulm7E2DBw/2ux/3LOnp60zWVOtu2YwZM3y9+olgwSZMmIB+paVxp7GmGseOHZO2Zx/2pqYmbNiwQdnOuxaqaeLEiT4eRC1Kady5i8Vi3JDtebm5GDRooJSd8lmT8oBVfcqmXxE+CPuisNzcXI7iPfFs0il1dXVKkHoM0P388yXwHjt6DJRSVAu1qZFIBIVFhRLbnjx5Umsmi4qKtK/XEZcVd+uGnJwcP7UnWgBPlohTfn6+v41LXRQVFWnljLw8bsJVXnNOTo5WxyejFrxc0IE0EonEmU+3L42WN8VHg8w+tZEMVAz4U55ZWcAmX7fIZIKE6dSpU2hpaUEkEgGhBH/69ICSoXKE9Fr37t3RvXt3RCIR5OflgRCCvLx85BckTdCwoUOxZ+9e//vHez5GYWEhPv74Y25fw4cPR05ODnIi/DFKSkrQo0cPRCIRFOTnA4SgoKDAN3OuAlxerpl1Lo4ePYqGhgbf5IsMF4lElMA5evQoRowYwciNk1bbAXxRSBCApG0TGjs/P58jAm9wNPZh8U06BZp0utelge86FVfFPAebyvFT8b1aUrWa8D3bz9xIbxYVllE5fFUkaJKWlhZsee89lJaW4szpM6g5VKO8sOef/y2JUS+66KJE1gpoicVQVVWFoUOH+WAdMnQoDh0+7F/w48eP49X/epXToUVFRRg6dChAqVLrjh8/3gdmLBZDRUUFRgwf4R9DxzQlJSWcznvttdcwYsQIxGIxqZahuKhIyTrHjh3D+vXrUVJSgqamJgng8ThmPHapkj/5eflatzkoKuKFl1intKWlJTE+ahw+hw8fxt69ezF0yFC9Z+KZbk3Chy2lZMNTlTt3Iic7BwDF4MGDeacJVOu0i1jMTlWfUkLRpUsXFBcV4SQTtjhz5gz2MsynmnJzc1FWVuZrv1gshnXr1vlPtaeBmk6fxtTJU+JB/pwcjLvoIrzDDLIghlvGjRvnZ2fycnMxcOBA/wbFYjGsWbPGB/DxRCC7sbERl19+uTbg77ouBg0cyAE1Fospx4mKRCIYOGiQMoLggVX3MAwcOBAuddGgYLOGhgbk5uYaTat4Pb766itQl2LokCEcUPfs2YNDhw4hLy8Pp0+f9h/+omgU53fvrjbvAe/4UgGOjdN6+loEJysFTDrVYbWopE9pcKAfFBg0aJDGu09qKI49E3WZI4YPR6FQxFxbW8sJ9draWjSebvKzlud3786Nh8RO5eXlHMNTb5mgBY8fP+6D1Pve1NSk/KneDexRUoLx48cHPnyRSATTp0+Ph3YoVTKjbho+fLgUiVBN7HmzYPRSslKcs7kZFBR5+fkYN26c9Ntqa2s5SVBz+HAiZYyUNGoQDrolHOJUseao9Kkkdqkc4/LaFRQUYOyYMZJnnpOTg7FjxyLaNSof2KXIzs7GpEmTMGLECGXcrrCwEBMmTEg4aK7vaAwZMgT9+/fn2g4YMABDhgyJazw32TYnJwdTpkxBeXk5l3dmpcKkSy5BXq7agWhsbPT3N3DAQFx66aXK0E2PHj1w+eWXo7CwEG5CF54UQNO3b19JjkQiEYweNRqjyssTr7UJdqa0OprG60LF35gTifgA61/WH1MmT1aGlyKRCPr374+RI0f6101c7+1HBUbPq+9X2k+ZjSwpKUG34m6S1y+ypg5rAEBeXbuWcsXSTAG1VzjtEAcgkIqoxWLpr78+i7NnvwYIwbe6dUtW+idy5dz3RFLckxn1p06hJRYDAUG0MIqIImCuK61TFTGr2tbV1aElFgNAUFhUKN1Y29K904l4Yxzsxfx+Ett675fyplHlozBs2FA/VpkTiSg9fyFQHPBSEV0Fk7pnABU8fy+MlJOTI8U/lWV8msIjvtAnDrrTp0/j9OnToAC6donn+NniaFMRtZvoIeBSVy6cZp0nlU4lYF7bSJMvy/U0KwDkdu6M3NzOfhv25hFKuLfHEUK4Zd7ox/5xXSoV0PslgVRXxEy4twbBK+9LLGf7SxEvjESIMq/P1f8L55Gbl4fchOMneeUaE9bY1AiXUm5b+Y3ShpFgdCPFGIArMWh2Drp/61vqwSgMVU2ivlTpztzOuejcubNycGNWRkhxVYVu9b1+NtTEgpINQ7GFyf6JEX4dBYULFw4cH4hcWIIBqw/kxDL1ZaaglHCsqwMgu424nAYuB185JR2Hj7sQkTZDTE1NTcpu4+aRkALahWZWQ75RADYNiplS2ZESvXmpB3CCJSVwQuhMSWUZwHn9ImBV3r4LFw5xJFZNFjfH513XjUsEhjX9+jfufWlJdpViuB5IHEd5TbXsagSsBpRcuZ+uWNoKXujTpw/nhcf1q2tVC5FxZrUCqUUgn6o9fRagvOMVX+Yynf0kFmYA68sAhfefzYLSD0+xTKlgVf8EEwD1weUiXo+VYEoPrOxTFe99Cn47BrDeD2FjuLTVVRIZDdCWVFSfChK00aTEYj+qSRUlkJwhGgL+FiBESgC1+z1a8y8wq2jC3YAeqRL7atiUUirk+qGPmbKf8VvGAM1bxmpTBqxsL1Mq2FEWsGJHPVazJp4MJVCS7KoDk1oqyJqUGO6jSgaEn8KP1JoeeG1NvU0yQWX6VSyq/R6gUYNiqdkqLSqmSKX1ghPlMwajUVVOFMuklCS0KqNnOfADkmOHADAm2dWzDgQqRagy/eItJRYM2iYjg9iAy6Rbrdbb/QKd6bfx/HWgZb18rVNFZUczW2RRCSQCMDlzr8q0eWClFHDiJ+p998Dpe/wCk7KgTUJFdSw9rVEgEGxUZdwN9Eh0S0g6dErDAd8ELmuQIy0+V3n9KoCy0RDqChpUFQ2gcoaKBWy2mL9XmX+RbTlzz5pzBqyEkLhmJcnvHrt6x+SYVHhKRQmgv+gmjUkN7ajwhpYgJ0qiFmu80jTY1ZYdaTpAT4FdJbMvOEoqVpXAGRSqYp0pVsDqnKikRKS+w6QKSSnJSoyfJv4k84+kjuUuDLG4owFApBaApSGB2yYyIIxj1Y4AVRWImMy+LlQlglQMVXHJAAHM2abCExaYrBfPAlQJVo+NvUyUJiTFRRAIkZ0oGuKKWgCWB6KprQq4qcdSLTg6M+DMBEADGFU3gFxQLFWnVTndyoayBOBmG9mUQKtNRbByZYEMm/qmngEsKzl8Xcr+eJLuRbYLJZFM6E7DZjRtPNOUwJx5Ry+AVVVmX7FMx6omrZodGODXsGmgp69gU98ho8IyhTPFATfdK2uhYTmm5RaQNDkyM6igoTZp21FK1S9iU8dRw7CqGAFQsWq2l0kS2dR1XWQ5WUktafD0/bQra+6Z8JJKm7KaNIhNCSGZAawBf5LJN3EnSY+Z0n5bKG3TYJkxMxUm+G/jXKnaeEmDbLbQRPT0XRpnS59NvcyT6oI5CueJ0ni6VeHp+z+K8JrULjyVoTB7Gk5S+wX82yOAm5nwlCoC4IeoRJAqHCd2OVtB5Yen2NinytNXpkkZE++BWOU8uYgf0C9SYYDJgZJmSpumqC4JOu5EzxFKA85FTKkGVVPpZECY9Gq279xAnSaV2DQBVg+gbJpUaf4F54k19SwoJSnQ/le+4wC3IwFTIwekznkpxFRNgGW1ajaFIn8vOEosWLUAFfSo0qHy5AVj4sUwFAXtYOxGMmfzjWacokNPlp6/pFOpnW5lAcuafj+Oqgroi6afLdsTGdRrr/LuWcCqnCdRo3IZH0I61t3RYqlNclMdjkWVywz5/8BogKBTtQzrAdXXj4r0qAdKj1m9eS+Xz0oBlWn3lrF1A1wxNAXXa0Ar5An+bzqHz6fqvlDtOLXqiirVMg+wgDoJ4OHy/w8Anr497uWYxwYAAAAASUVORK5CYII=" alt="Maor Development" /></a>
+				<ol>
+					<li>
+						<a href="#Hwhatsikariamplus">מה זה Ikariam+?</a>
+						<ol>
+							<li><a href="#HIBL"><i>Ikariam+ רשימת בניה</i></a></li>
+							<!--<li><a href="#HIBC"><i>Ikariam+ בנית עיר</i></a></li>-->
+							<li><a href="#HIPB"><i>Ikariam+ בוט פיראטים</i></a></li>
+							<li><a href="#HIS"><i>Ikariam+ ריגול</i></a></li>
+							<li><a href="#HIMC"><i>Ikariam+ מחשבון צבאי</i></a></li>
+							<li><a href="#HIFL"><i>Ikariam+ מיקומים מהירים</i></a></li>
+							<li><a href="#HISU"><i>Ikariam+ חיפוש שחקן/ברית/עיר</i></a></li>
+							<li><a href="#HICR"><i>Ikariam+ צילום דוחות</i></a></li>
+							<li><a href="#HIAA"><i>Ikariam+ התרעת תקיפה</i></a></li>
+							<li><a href="#HISA"><i>Ikariam+ תקיפה מתוסקרפטת</i></a></li>
+							<li><a href="#HIAR"><i>Ikariam+ הרשמה אוטומטית</i></a></li>
+						</ol>
+					</li>
+					<li><a href="#Hrequirements">דרישות מערכת</a></li>
+					<li><a href="#HUA">הסכם שימוש</a></li>
+					<li>
+						<a href="#HSettings">הגדרות</a>
+						<ol>
+							<li><a href="#HUserAgent">User Agent</a></li>
+							<li><a href="#HProxy">פרוקסי</a></li>
+							<li><a href="#HIkariamPlusLocation">Ikariam+ מיקום</a></li>
+							<li><a href="#HCache">מיקום מטמון</a></li>
+							<li><a href="#HReportsLocation">מיקום דוחות</a></li>
+							<li><a href="#HCef">Cefsharp</a></li>
+						</ol>
+					</li>
+				</ol>
+				<h2 id="Hwhatsikariamplus">מה זה <i>Ikariam+</i>?</h3>
+				<u>מידע בסיסי</u><br />
+				<i>Ikariam+</i> זו תוכנה למחשב שמאפשרת לך להתחבר לחשבון שלך בכל שרת ומדינה.<br />
+				אתה יכול לפתוח כמה חשבונות במגביל (רק תריץ את Launcher.exe שוב)<br />
+				<u>מה הסיפור? זה לא ביג דיל, אני יכול לפתוח כמה כרטיסיות בדפדפן שלי</u><br />
+				התשובה הקצרה היא כן, אתה יכול.<br />
+				<b>אבל</b>, ב <i>Ikariam+</i> אתה יכול להשתמש בכל אחת מהתכונות המובנות שמשפרות לך את חווית המשחק!<br />
+				כלים כמו <a href="#HIBL"><i>Ikariam+ רשימת בנייה</i></a> שנותן לך רשימת בנייה אין סופית למבנים.<br />
+				או <a href="#HIPB"><i>Ikariam+ בוט פיראטים</i></a> שעושה לך את כל המשימות, במינימום זמן, עם אפשרות להמיר נקודות לכידה לכוח צוות עם אפילו <b>פתירת קאפצ'ה אוטומטית</b>! אכן, זה יכול לפתור לך את הקאפצ'ות המעצבות ברגע!<br />
+				אם אתה לא אוהב לגלוש מהIP שלך אתה יכול להשתמש ב<i>פרוקסי</i> (מה-Launcher.exe) במהרה, רק תכתוב את כתובת הפרוקסי שלך והתוכנה תשתמש בכתובת זו! דוגמה לפרוקסי: 1.2.3.4:8080<br />
+				Tor כלול, אתה יכול להריץ אותו מהדף פתיחה (אנא ודא שהפורטים 9158 ו 9058 פנוים)<br />
+				בנוסף, אני מגנים על המידע שלך, כל החיבורים נעשים על שרת SSL מאובטח (https) כברירת מחדל, וישנה אפשרות להשתמש ב-Tor כגשר פרוקסי, כברירת מחדל לפרוקסי של Tor תכתוב את הכתובת: <a href="socks://127.0.0.1:9150">socks://127.0.0.1:9150</a> תוך כדי שTor רץ!<br />
+				<i>Ikariam+</i> מגיע עם פתיחה נוחה, ככה שאתה לא צריך לעשות הגדרות מסובכות כדי להתחיל<br />
+				בנוסף, התוכנה תתעדכן אוטומטית בכל פעם שישנו עדכון/תיקון בעיה/תוסף חדש. ככה שאם יש תיקון/תוסף חדש/אפשרות נוספת, אתה תקבל אותו!.<br />
+				להלן רשימה מלאה של כל הכלים ב<i>Ikariam+</i>:
+				
+				<h3 id="HIBL"><i>Ikariam+ רשימת בנייה</i></h3>
+				<i>Ikariam+ רשימת בנייה</i> הוא כלי שנותן לך לבנות מספר מבנים ברשימה, לאורך אין סופי, בניגוד לאחד שאתה קונה באמברוסיה.<br />
+				<u>איך להשתמש:</u><br />
+				1) על כל מבנה ליד השם תלחץ על "Add to queue".<br />
+				2) חזור על שלב 1 אחרי שסיימת את הרשימה.<br />
+				3) לך ל Scripts -> Build List -> Start Queue.<br />
+				
+				<!--<h3 id="HIBC"><i>Ikariam+ בנית עיר</i></h3>
+				<i>Ikariam+ בנית עיר</i> הוא כלי שמאפשר לך לבנות עיר בתוך אי כאשר מתפנה מקום.<br />
+				לדוגמה, האי 50:50 מלא, אז כאשר <i>Ikariam+ בנית עיר</i> מופעל, זה מחפש כל דקה כדי לבדוק אם התפנה בשבילך מקום, אם כן, Ikairam+ יבנה בשבילך עיר חדשה שם!<br />
+				<u>איך להשתמש:</u><br />
+				1) לך לScripts -> Build City -> Start Script<br />
+				2) תרשום את מיקומי האיים שברצונך לבנות בהם עיר, מופרד באמצעות פסיקים.<br />
+				&nbsp;&nbsp; לדוגמה: "50:50,98:5" - X:Y תבנית (בלי רווחים!)-->
+				
+				
+				<h3 id="HIPB"><i>Ikariam+ בוט פיראטים</i></h3>
+				<i>Ikariam+ בוט פיראטים</i> זה כלי שעושה לך את כל המשימות פיראטים. כלומר, אתה לא צריך להקליק כל 2.5 דקות.<br />
+				הכלי הזה עובד על כל המשימות, ויש לו עוד הרבה שימושים, כמו להמיר את כל הנקודות לכידה לכוח צוות,<br />
+				או, פתירת קאפצ'ה אוטומטית (עם שירות מיוחד, זה לא עולה עוד כסף - זה בחינם!), אז אתה יכול לעזוב את התוכנית פועלת ולראות את הנקודות רק עולות ועולות.<br />
+				(בנוסף, אתה יכול להריץ את זה על כמה חשבונות במקביל!)<br />
+				ישנה אפשרות להריץ את הבוט פיראטים במינימום דרישות מערכת, ככה שאתה תוכל להריץ אפילו יותר משתמשים כפולים!<br />
+				רק תבחר באפשרות "פיראטיות" בדף הרצה - אם אתה משתמש בפרוקסי, זה חייב להיות socks פרוקסי (כמו Tor)<br />
+				<strong>שים לב: אם תייצר יותר מידי נקודות ביום אחד, אתה תקבל באן! תנסה לא לעבור את רף ה-20,000 נקודות ביום.</strong><br />
+				
+				<u>פתירת קאפצ'ה (9KW)</u>
+				1) הרשם ב-<a href="https://www.9kw.eu/register_131044.html" target="_blank">9kw.eu</a>.<br />
+				2) צור מפתח API ב- <a href="https://www.9kw.eu/userapi.html" target="_blank">9kw.eu/userapi.html</a>.<br />
+				3) פתור קאפצ'ות לאחרים ב-<a href="https://www.9kw.eu/usercaptcha.html" target="_blank">9kw.eu/usercaptcha.html</a>.<br />
+				4) הרץ את התוכנה דרך Launcher.exe והגדר את 9kw api key ו- 9kw api source מהנתונים שקיבלת בצעד 2.<br />
+				<br />
+				<strong style="color: Red;">De-Captcher נתמך גם!</strong>
+				
+				<h3 id="HIS"><i>Ikariam+ ריגול</i></h3>
+				<i>Ikariam+ ריגול</i> הוא כלי ששולח לך מרגלים למספר ערים נבחרות ובוחר את היחס הטוב ביותר של מרגלים/הסחות.<br />
+				<u>איך להשתמש:</u><br />
+				1) לך לScripts -> Spy -> Start Script.<br />
+				2) רשום את מספרי הזיהוי של הערים (מספר מזהה של עיר ניתן לראות במבט האי, כאשר המספר המזהה מופיע ליד שם העיר) שאתה רוצה שהמרגלים יישלחו מופרדות בפסיקים. <br />
+				&nbsp;&nbsp; לדוגמא: "16352,12345,54321" (בלי רווחיםs!)
+				
+				<h3 id="HIMC"><i>Ikariam+ מחשבון צבאי</i></h3>
+				<i>Ikariam+ מחשבון צבאי</i> זה נותן לך את המספר המדויק של גנרלים/עצים/גופרים/זהב/וכד' שיהיו/נדרשים לצבא הנבחר. <br />
+				<u>איך להשתמש:</u><br />
+				1) לך לCalculator -> Military calculator.<br />
+				
+				
+				<h3 id="HIFL"><i>Ikariam+ מיקומים מהירים</i></h3>
+				<i>Ikariam+ מיקומים מהירים</i> זה כלי שמאפשר לך "לקפץ" בין מיקומים בין רגע (כן, ישנה כבר אפשרות כזו, אך היא מוגבלת במספר מיקומים).<br />
+				אך אפשרות זו ללא הגבלה!<br />
+				<u>איך להשתמש:</u><br />
+				1) ערוך את config.xml מהמיקום של Ikariam+.<br />
+				2) הוסיף מיקום כמו בדוגמה מ-Bot/FastLocations.<br />
+				
+				<h3 id="HISU"><i>Ikariam+ חיפוש שחקן/ברית/עיר</i></h3>
+				<i>Ikariam+ חיפוש שחקן/ברית/עיר</i> הוא כלי שמאפשר לך תוך כמה דקות לקבל רשימה של מיקומי עיר/שחקן/ברית כולל ערים/נמלים כבושים, רמת נס, איזה משאב יש באי וכ'ו.<br />
+				הכלי בנוסף גם מיצא את כל המידע לקובץ CSV (טבלת Excel) עם מידע כמו: מה הפלא והרמה, מה המבנים באותה עיר (אם יש לך מרגלים/זכות לראות את העיר).
+				<u>איך להשתמש:</u><br />
+				1) לך לScripts -> Search -> Search by ally tag/player name/city name.<br />
+				2) חכה עד להשלמת החיפוש.<br />
+				3) לך לתיקיית Ikariam+ ופתח את הקובץ Report*DAY**MONTH**YEAR*-*HOUR**MINUTE*.<br />
+				* אם יש לך מרגל/זכות לראות את אותה עיר, רשימת המבנים בעיר תופיע בדו"ח
+				
+				
+				<h3 id="HICR"><i>Ikariam+ צילום דוחות</i></h3>
+				<i>Ikariam+ צילום דוחות</i> זה כלי ששומר אצלך תמונות של דוחות מלחמה/ריגול בלחיצת כפתור<br />
+				<u>איך להשתמש:</u><br />
+				1) פתח דוח (צבאי/ריגול).<br />
+				2) לך לScripts -> Capture report -> Capture ... report.<br />
+				
+				<h3 id="HIAA"><i>Ikariam+ התרעת תקיפה</i></h3>
+				<i>Ikariam+ התרעת תקיפה</i> זה כלי שמתריע לך (ע"י צליל מעצבן והודעה קופצת) כאשר אם אתה או מישהו מהברית שלך(אם אתה הגנרל) תחת התקפה.<br />
+				כאשר ההתרעה נדלקת אתה יכול לבחור מה לעשות באמצעות <a href="#HISA"><i>Ikariam+ תקיפה מתוסקרפטת</i></a>!<br />
+				<u>איך להשתמש:</u><br />
+				1) לך לScripts -> Check for attacks -> Check for attack on me/ally(שגרירות צריכה להיות פתוחה).<br />
+				2) כאשר יש התקפה <strong>עליך בלבד</strong> <a href="#HISA"><i>Ikariam+ תקיפה מתוסקרפטת</i></a> יותחל מידית על הקובץ "AttackedFight.ikr".<br />
+				
+				<h3 id="HISA"><i>Ikariam+ תקיפה מתוסקרפטת</i></h3>
+				<i>Ikariam+ תקיפה מתוסקרפטת</i> זה כלי שתוקף (בוזז/פושט פיראטית/מעביר יחידות/וכד') על ידי הוראות מתוסרטות.<br />
+				לדוגמה אם אתה רושם:<br />
+				<div class="code">Set Hoplite 90<br />Set Ram 15<br />Raid<br />Wait 15<br />PiracyRaid<br />Set Hoplite 0<br />Set Ram 0<br />Set SteamGiant 200<br />Raid</div><br />
+				זה יעשה:<br />
+				* יגדיר 90 פלאנקסים ו-15 איילי ברזל<br />
+				* יבזוז עם הצבא שהוגדר<br />
+				* יחכה 15 דקותs<br />
+				* יפשוט פיראטית על אותה עיר<br />
+				* יגדיר ל-0 פלאנקסים, 0 איילי ברזל ו-200 ענקי קיטור<br />
+				* יבזוז עם הצבא שהוגדר<br />
+				כל כך קל, אתה יכול לתקוף אחרים מבלי בכלל להיות מחובר!<br />
+				<u>איך להשתמש:</u><br />
+				1) לך לScripts -> Scripted attack -> New scripted attack (for new file) / Start script (open exist file)
+				<h4>איך לכתוב סקריפט</h4>
+				<div style="margin-left: 2%;">
+					כל שורה חייבת להכיל <b>רק פקודה אחת</b>.<br />
+					<b>אל תיקח סקריפטים ממקורות שאינך סומך עליהם</b><br />
+					כתיבת "#" או ";" בתחילת שורה תיחשב כהערה ותתעלם על ידי התוכנה.<br />
+					לדוגמה />
+					<div class="code">; זוהי הערה<br /># זוהי גם כן הערה</div><br />
+				</div>
+				<h4>רשימת פקודות מלאה (ללא מרכאות)</h4>
+				<ol>
+					<li>
+						"GoTo *Line*" - הסקריפט יחזור לשורה *Line* (החלף במספר שלם חיובי) ותמשיך משם
+						<br />
+						לדוגמה:
+						<div class="code">GoTo 1<br /># The script will start from the beginning</div>
+					</li>
+					<li>
+						"Wait *Minutes*" - משהה את התוכנית ל*Minutes* דקות(החלף עם מספר שלם חיבוי)
+						<br />
+						לדוגמה:
+						<div class="code">Wait 10<br /># The script will wait 10 minutes</div>
+					</li>
+					<li>
+						"RefreshData" - מרענן את הנתונים בחלון (אותו רענון קורה פעם בדקה)
+						<br />
+						לדוגמה:
+						<div class="code">RefreshData<br /># The page will refresh</div>
+					</li>
+					<li>
+						"ChangeCityID *CityID*" - שנה עיר יחוס.<br />
+						לפי אופציה זו התוכנה תדע <b>לאיזו</b> עיר אתה מתכוון כאשר אתה רוצה לפשוט /לבזוז/וכד' על עיר<br />
+						כדי לקבל את המספר המזהה של העיר, לך למבט האי, וליד שם העיר יופיע המספר המזהה של העיר<br />
+						<br />
+						לדוגמה:
+						<div class="code">ChangeCityID 86615<br /># The selected city will set to city ID 86615</div>
+					</li>
+					<li>
+						"ChangeCurrentCityID *CityID*" - שנה עיר נוכחית.<br />
+						לפי אופציה זו התוכנה תדע <b>מאיזו</b> עיר אתה מתכוון כאשר אתה רוצה לפשוט /לבזוז/וכד' על עיר<br />
+						כדי לקבל את המספר המזהה של העיר, לך למבט האי, וליד שם העיר יופיע המספר המזהה של העיר<br />
+						העיר הזאת חייבת להיות בשליטתך, כלומר, אתה יכול לראות את העיר ברשימת הערים שלך.
+						<br />
+						לדוגמה:
+						<div class="code">ChangeCurrentCityID 86615<br /># The current city will set to city ID 86615</div>
+					</li>
+					<li>
+						"UpgradeBuilding *PositionID*" - שדרג מבנה שנמצא באותו מיקום בעיר.<br />
+						המיקום של המבנה יהיה בתצוגת עיר ליד שם המבנה.
+						<br />
+						לדוגמה:
+						<div class="code">UpgradeBuilding 17<br /># Upgrade pirate fortress</div>
+					</li>
+					<li>
+						"StartPiracy" - התחל יצור נקודות לכידה (צריך להיות בתצוגת עיר ובעיר עם מבצר פיראטים).
+						<br />
+						לדוגמה:
+						<div class="code">StartPiracy<br /># Start piracy script</div>
+					</li>
+					<li>
+						"StopPiracy" - הפסק ייצור נקודות לכידה.
+						<br />
+						לדוגמה:
+						<div class="code">StopPiracy<br /># Stop piracy script</div>
+					</li>
+					<li>
+						"Raid" - בזוז את העיר שנבחרה.
+						<br />
+						לדוגמה:
+						<div class="code">Raid<br /># Raid the selected city</div>
+					</li>
+					<li>
+						"Occupy" - כבוש את העיר שנבחרה.
+						<br />
+						לדוגמה:
+						<div class="code">Occupy<br /># Occupy the selected city</div>
+					</li>
+					<li>
+						"PiracyRaid" - פשוט פיראטית על העיר שנבחרה.
+						<br />
+						לדוגמה:
+						<div class="code">PiracyRaid<br /># Piracy raid the selected city</div>
+					</li>
+					<li>
+						"DeployUnits" - פרוס יחידות בעיר שנבחרה.
+						<br />
+						לדוגמה:
+						<div class="code">DeployUnits<br /># Deploy units into the selected city</div>
+					</li>
+					<li>
+						"ChangeView *View*" - שנה תצוגה.<br />
+						*View* יכול להיות: "City", "Island", "World"
+						<br />
+						לדוגמה:
+						<div class="code">ChangeView Island<br /># Switch to island view</div>
+					</li>
+					<li>
+						"JS *Command*" - הרץ פקודת JavaScript (השתמש באפשרות זו רק אם אתה יודע מה אתה עושה!).
+						<br />
+						לדוגמה:
+						<div class="code">JS alert('this script work');<br /># Run JavaScript pop-up message</div>
+					</li>
+					<li>
+						"Set *Unit* *HowMuch*" - לבחור איזו ויחידה וכמות.<br />
+						*HowMuch* - (החלף עם מספר שלם חיובי)<br />
+						*Unit* - Hoplite/SteamGiant/Spearman/Slinger/Swordsman/Archer/SulphurCarabineer/Ram/Catapult/Mortar/Gyrocopter/BalloonBombardier/Cook/Doctor/TransporterShips
+						<br />
+						לדוגמה:
+						<div class="code">Set Hoplite 100<br />Set Mortar 30<br />Set TransporterShips 50<br /># Set to 100 hoplites, 30 mortars and 50 transporter ships</div>
+					</li>
+					<li>
+						"ResetUnits" - לאפס את בחירת כל היחידות.
+						<br />
+						לדוגמה:
+						<div class="code">ResetUnits<br /># Equal to "Set *Unit* 0" for all units</div>
+					</li>
+				</ol>
+				<h4>דוגמאות לסקריפטים</h4>
+				לפשוט פיראטית על כל היצרנים<br />
+				<div class="code">
+					ChangeCityID 86615<br />
+					PiracyRaid<br />
+					Wait 21<br />
+					# City in the same island as me, so minimum time to wait is 20 minutes (10 to go + 10 to return + 1 for be sure)<br />
+					ChangeCityID 71622<br />
+					PiracyRaid<br />
+					Wait 21<br />
+					#Etc..<br />
+				</div>
+				<br /><br />רשימת בנייה<br />
+				<div class="code">
+					UpgradeBuilding 17<br />
+					Wait 60<br />
+					# Upgrade pirate fortress and wait 60 minutes for upgrade to complete<br />
+					UpgradeBuilding 0<br />
+					Wait 180<br />
+					# Upgrade town hall and wait 3 hours for upgrade to complete<br />
+				</div>
+				
+				
+				<h3 id="HIAR"><i>Ikariam+ הרשמה אוטומטית</i></h3>
+				<i>Ikariam+ הרשמה אוטומטית</i> הוא כלי שמאפשר לך ליצור משתמש חדש (מאותה כתובת אימייל! זהו תקל במשחק) מהזמננה, ועושה לך את כל המדריך במשחק עד לרגע של בניית מבצר פיראטים.
+				
+				<h2 id="Hrequirements">דרישות מערכת</h3>
+				מערכת הפעלה: Windows 7/8/8.1/10 32&64 bit<br />
+				.NET: 4.5.2<br />
+				זיכרון זמן ריצה: 20MB (!)<br />
+				זיכרון כונן קשיח: 100MB<br />
+				
+				<h2 id="HUA">הסכם שימוש</h3>
+				התוכנה פותחה למערכת ההפעלה ווינדוס. מאק ולינוקס לא נתמכות (למרות שאתה יכול להשתמש ב-<a href="https://en.wikipedia.org/wiki/Wine_(software)" target="_blank">Wine</a>).<br />
+				התוכנה לא אמורה לתת לך הרחקה מן המשחק. האפשרות היחידה לכך היא אם תגזים ותייצר מעל ל20,000 נקודות לכידה ביום. <br/>
+				במקרה של הרחקה מאיקרים, אני לא אחראי לכך.
+				
+				<h2 id="HSettings">הגדרות</h2>
+				גרסאת Ikariam+: [11]<br />
+				<h3 id="HUserAgent">User Agent</h3>
+				[3]
+				<h3 id="HProxy">פרוקסי</h3>
+				[4]
+				<h3 id="HIkariamPlusLocation">Ikariam+ מיקום</h3>
+				[5] <input onclick="callbackObj.openExplorer('[5]')" type="button" class="button" value="Open in file explorer" />
+				<h3 id="HCache">מיקום מטמון</h3>
+				[6] <input onclick="callbackObj.openExplorer('[6]')" type="button" class="button" value="Open in file explorer" />
+				<h3 id="HReportsLocation">מיקום דוחות</h3>
+				[7] <input onclick="callbackObj.openExplorer('[7]')" type="button" class="button" value="Open in file explorer" />
+				<h3 id="HCef">Cefsharp</h3>
+				CefSharp גרסאת: [8]<br />
+				Cef גרסאת: [9] <br />
+				Chromium גרסאת: [10] <br />
+				<a href="chrome://version">עוד</a>, <a href="chrome://gpu/">עוד</a>
+			</div>
+		</div>
+		<div style="background: url(https://[0].ikariam.gameforge.com/skin/rtl/layout/bg_contentBox01_footer.png) no-repeat; background-size: 100% 100%; height: 3px; overflow: hidden;"></div>
+		<script>
+			document.getElementById('Hebrew').style.display = 'none';
+			document.getElementById('English').style.display = 'block';
+			[12]
+		</script>
+	</body>
+</html>
