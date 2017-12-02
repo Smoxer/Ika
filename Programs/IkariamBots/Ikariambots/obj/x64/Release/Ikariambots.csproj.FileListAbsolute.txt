@@ -109,3 +109,41 @@ H:\My Programs\IkariamPlus\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefS
 H:\My Programs\IkariamPlus\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefSharp.Core.xml
 H:\My Programs\IkariamPlus\Programs\IkariamBots\Ikariambots\bin\x64\Release\INIFileParser.xml
 H:\My Programs\IkariamPlus\Programs\IkariamBots\Ikariambots\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\IkariamPlus.exe.config
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\IkariamPlus.exe
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\IkariamPlus.pdb
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefSharp.Core.dll
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefSharp.dll
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefSharp.WinForms.dll
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\DecaptcherLib.dll
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\INIFileParser.dll
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefSharp.WinForms.xml
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefSharp.xml
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\CefSharp.Core.xml
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\INIFileParser.xml
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\bin\x64\Release\Newtonsoft.Json.xml
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\Ikariambots.csprojResolveAssemblyReference.cache
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\Ikariambots.csproj.ResolveComReference.cache
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.AutoRegister.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.CSV.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.CityAndIslandID.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.IslandsByTime.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.ManualCaptchaInput.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.NumberPicker.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.PiracyInfo.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.SelectUsers.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.MainWindow.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.Military.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.PiracyHide.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Properties.Resources.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Resources.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.ScriptEditor.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.SelectCity.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.SendGyro.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Forms.User.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamBots.Search.resources
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\Ikariambots.csproj.GenerateResource.Cache
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\Ikariambots.csproj.CoreCompileInputs.cache
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamPlus.exe
+C:\Users\Omri\Desktop\Ika+\Programs\IkariamBots\Ikariambots\obj\x64\Release\IkariamPlus.pdb
