@@ -106,13 +106,13 @@ namespace Launcher
             try
             {
                 string countriesHTML = client.DownloadString("https://us.ikariam.gameforge.com/");
-                MatchCollection countries = Regex.Matches(countriesHTML, "<li.*><a href=\"//(.+?)\\.ikariam\\.gameforge\\.com/\\?kid=.*\" target=\"_top\" rel=\"nofollow\" class=\".*\">(.+?)</a></li>");
+                MatchCollection countries = Regex.Matches(countriesHTML, "<li.*><a href=\"(https:|)//(.+?)\\.ikariam\\.gameforge\\.com/\\?kid=.*\" target=\"_top\" rel=\"nofollow\" class=\".*\">(.+?)</a></li>");
                 string build = string.Empty;
                 foreach (Match match in countries)
                 {
                     GroupCollection groups = match.Groups;
                     if (groups.Count >= 2)
-                        country.Items.Add(string.Format("{1} - {0}", groups[1].Value, groups[2].Value));
+                        country.Items.Add(string.Format("{1} - {0}", groups[2].Value, groups[3].Value));
                 }
             }
             catch (WebException e)

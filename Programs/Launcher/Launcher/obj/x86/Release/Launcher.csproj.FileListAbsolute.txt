@@ -20,3 +20,15 @@ C:\Users\Omri\Desktop\IkariamPlus\Programs\Launcher\Launcher\obj\x86\Release\Lau
 C:\Users\Omri\Desktop\IkariamPlus\Programs\Launcher\Launcher\obj\x86\Release\Launcher.csproj.GenerateResource.Cache
 C:\Users\Omri\Desktop\IkariamPlus\Programs\Launcher\Launcher\obj\x86\Release\Launcher.exe
 C:\Users\Omri\Desktop\IkariamPlus\Programs\Launcher\Launcher\obj\x86\Release\Launcher.pdb
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\bin\x86\Release\Launcher.exe.config
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\bin\x86\Release\Launcher.exe
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\bin\x86\Release\Launcher.pdb
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\bin\x86\Release\INIFileParser.dll
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\bin\x86\Release\INIFileParser.xml
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.Form1.resources
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.Properties.Resources.resources
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.User.resources
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.csproj.GenerateResource.Cache
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.csproj.CoreCompileInputs.cache
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.exe
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.pdb
