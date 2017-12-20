@@ -32,3 +32,4 @@ C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.c
 C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.csproj.CoreCompileInputs.cache
 C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.exe
 C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.pdb
+C:\Users\Omri\Desktop\Ika+\Programs\Launcher\Launcher\obj\x86\Release\Launcher.csprojResolveAssemblyReference.cache
